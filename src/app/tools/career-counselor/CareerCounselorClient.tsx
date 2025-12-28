@@ -335,7 +335,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                                 type="number"
                                 value={formData.age}
                                 onChange={(e) => handleChange('age', e.target.value)}
-                                className="w-full p-3 border rounded-lg"
+                                className="w-full p-3 border rounded-lg font-bold text-gray-950 placeholder:text-gray-600"
                                 placeholder="e.g., 18"
                             />
                         </div>
@@ -345,7 +345,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                                 type="text"
                                 value={formData.country}
                                 onChange={(e) => handleChange('country', e.target.value)}
-                                className="w-full p-3 border rounded-lg"
+                                className="w-full p-3 border rounded-lg font-bold text-gray-950 placeholder:text-gray-600"
                                 placeholder="e.g., Pakistan"
                             />
                         </div>
@@ -357,7 +357,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                                     handleChange('education', e.target.value)
                                     if (e.target.value !== 'Other') setCustomEducation('')
                                 }}
-                                className="w-full p-3 border rounded-lg"
+                                className="w-full p-3 border-2 border-slate-200 rounded-xl font-bold text-gray-950"
                             >
                                 <option value="">Select...</option>
                                 <option value="School Student">School Student</option>
@@ -373,7 +373,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                                     value={customEducation}
                                     onChange={(e) => setCustomEducation(e.target.value)}
                                     placeholder="Please specify your education..."
-                                    className="w-full p-3 border rounded-lg mt-2"
+                                    className="w-full p-3 border-2 border-slate-200 rounded-xl mt-2 font-bold text-gray-950 placeholder:text-gray-600"
                                 />
                             )}
                         </div>
@@ -394,7 +394,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                                         setCustomInterest('') // Clear custom input if not Other
                                     }
                                 }}
-                                className="w-full p-3 border rounded-lg"
+                                className="w-full p-3 border-2 border-slate-200 rounded-xl font-bold text-gray-950"
                             >
                                 <option value="">Select...</option>
                                 <option value="Technology">Technology</option>
@@ -410,7 +410,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                                     value={customInterest}
                                     onChange={(e) => setCustomInterest(e.target.value)}
                                     placeholder="Please specify your interest..."
-                                    className="w-full p-3 border rounded-lg mt-2"
+                                    className="w-full p-3 border-2 border-slate-200 rounded-xl mt-2 font-bold text-gray-950 placeholder:text-gray-600"
                                 />
                             )}
                         </div>
@@ -419,7 +419,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             <select
                                 value={formData.workStyle}
                                 onChange={(e) => handleChange('workStyle', e.target.value)}
-                                className="w-full p-3 border rounded-lg"
+                                className="w-full p-3 border-2 border-slate-200 rounded-xl font-bold text-gray-950"
                             >
                                 <option value="">Select...</option>
                                 <option value="Theory-based">Theory-based</option>
@@ -431,7 +431,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             <select
                                 value={formData.workType}
                                 onChange={(e) => handleChange('workType', e.target.value)}
-                                className="w-full p-3 border rounded-lg"
+                                className="w-full p-3 border-2 border-slate-200 rounded-xl font-bold text-gray-950"
                             >
                                 <option value="">Select...</option>
                                 <option value="Office Job">Office Job</option>
@@ -452,7 +452,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                                 <select
                                     value={formData.mathLevel}
                                     onChange={(e) => handleChange('mathLevel', e.target.value)}
-                                    className="w-full p-3 border rounded-lg"
+                                    className="w-full p-3 border rounded-lg font-bold text-gray-950"
                                 >
                                     <option value="">Select...</option>
                                     <option value="Poor">Poor</option>
@@ -465,7 +465,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                                 <select
                                     value={formData.englishLevel}
                                     onChange={(e) => handleChange('englishLevel', e.target.value)}
-                                    className="w-full p-3 border rounded-lg"
+                                    className="w-full p-3 border rounded-lg font-bold text-gray-950"
                                 >
                                     <option value="">Select...</option>
                                     <option value="Basic">Basic</option>
@@ -479,7 +479,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             <select
                                 value={formData.financialUrgency}
                                 onChange={(e) => handleChange('financialUrgency', e.target.value)}
-                                className="w-full p-3 border rounded-lg"
+                                className="w-full p-3 border rounded-lg font-bold text-gray-950"
                             >
                                 <option value="">Select...</option>
                                 <option value="Urgent (Need income ASAP)">Urgent (Need income ASAP)</option>
@@ -492,7 +492,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             <select
                                 value={formData.communicationLevel}
                                 onChange={(e) => handleChange('communicationLevel', e.target.value)}
-                                className="w-full p-3 border rounded-lg"
+                                className="w-full p-3 border rounded-lg font-bold text-gray-950"
                             >
                                 <option value="">Select...</option>
                                 <option value="Shy / Improving">Shy / Improving</option>
@@ -515,7 +515,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                                     handleChange('primaryGoal', e.target.value)
                                     if (e.target.value !== 'Other') setCustomGoal('')
                                 }}
-                                className="w-full p-3 border rounded-lg"
+                                className="w-full p-3 border rounded-lg font-bold text-gray-950"
                             >
                                 <option value="">Select...</option>
                                 <option value="High Salary">High Salary</option>
@@ -531,7 +531,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                                     value={customGoal}
                                     onChange={(e) => setCustomGoal(e.target.value)}
                                     placeholder="Please specify your career goal..."
-                                    className="w-full p-3 border rounded-lg mt-2"
+                                    className="w-full p-3 border rounded-lg mt-2 font-bold text-gray-950 placeholder:text-gray-600"
                                 />
                             )}
                         </div>
@@ -540,7 +540,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             <textarea
                                 value={formData.additionalNotes}
                                 onChange={(e) => handleChange('additionalNotes', e.target.value)}
-                                className="w-full p-3 border rounded-lg min-h-[100px]"
+                                className="w-full p-3 border rounded-lg min-h-[100px] font-bold text-gray-950 placeholder:text-gray-600"
                                 placeholder="Any specific personal constraints or questions for the AI counselor?"
                             />
                         </div>

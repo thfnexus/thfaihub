@@ -106,7 +106,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                 required
                                 type="text"
                                 placeholder="e.g. Basic JS, Excel, Marketing Basics"
-                                className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm"
+                                className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                 value={formData.currentSkills}
                                 onChange={(e) => setFormData({ ...formData, currentSkills: e.target.value })}
                             />
@@ -120,7 +120,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                 required
                                 type="text"
                                 placeholder="e.g. AI Engineer, Product Manager"
-                                className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm"
+                                className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                 value={formData.targetRole}
                                 onChange={(e) => setFormData({ ...formData, targetRole: e.target.value })}
                             />
@@ -130,7 +130,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                             <div className="space-y-2">
                                 <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Budget Limit</label>
                                 <select
-                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm appearance-none"
+                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm appearance-none text-slate-950"
                                     value={formData.budgetLimit}
                                     onChange={(e) => setFormData({ ...formData, budgetLimit: e.target.value })}
                                 >
@@ -143,7 +143,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                             <div className="space-y-2">
                                 <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Time / Week</label>
                                 <select
-                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm appearance-none"
+                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm appearance-none text-slate-950"
                                     value={formData.timeCommitment}
                                     onChange={(e) => setFormData({ ...formData, timeCommitment: e.target.value })}
                                 >
@@ -158,7 +158,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                         <div className="space-y-2 pb-4">
                             <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Platform Preference</label>
                             <select
-                                className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm appearance-none"
+                                className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm appearance-none text-slate-950"
                                 value={formData.platformPreference}
                                 onChange={(e) => setFormData({ ...formData, platformPreference: e.target.value })}
                             >
@@ -176,7 +176,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                     required
                                     type="text"
                                     placeholder="Specify platform (e.g. Khan Academy)"
-                                    className="w-full px-4 py-3 mt-2 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm"
+                                    className="w-full px-4 py-3 mt-2 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                     value={formData.otherPlatform}
                                     onChange={(e) => setFormData({ ...formData, otherPlatform: e.target.value })}
                                 />

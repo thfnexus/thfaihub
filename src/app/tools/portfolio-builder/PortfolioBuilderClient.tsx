@@ -215,7 +215,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                     required
                                                     type="text"
                                                     placeholder="John Doe"
-                                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-cyan-500 outline-none transition-all font-bold text-sm"
+                                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-cyan-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                                     value={formData.fullName}
                                                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                                                 />
@@ -226,7 +226,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                     required
                                                     type="text"
                                                     placeholder="e.g. Senior Backend Engineer"
-                                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-cyan-500 outline-none transition-all font-bold text-sm"
+                                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-cyan-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                                     value={formData.targetRole}
                                                     onChange={(e) => setFormData({ ...formData, targetRole: e.target.value })}
                                                 />
@@ -238,7 +238,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                 required
                                                 rows={4}
                                                 placeholder="Write a few lines about your professional background and goals."
-                                                className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-cyan-500 outline-none transition-all font-bold text-sm resize-none"
+                                                className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-cyan-500 outline-none transition-all font-bold text-sm resize-none text-slate-950 placeholder:text-slate-600"
                                                 value={formData.bio}
                                                 onChange={(e) => setFormData({ ...formData, bio: e.target.value })}
                                             />
@@ -281,7 +281,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                             required
                                                             type="text"
                                                             placeholder="Software Engineer"
-                                                            className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm"
+                                                            className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                                             value={exp.role}
                                                             onChange={(e) => handleExperienceChange(idx, 'role', e.target.value)}
                                                         />
@@ -292,7 +292,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                             required
                                                             type="text"
                                                             placeholder="Tech Corp"
-                                                            className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm"
+                                                            className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                                             value={exp.company}
                                                             onChange={(e) => handleExperienceChange(idx, 'company', e.target.value)}
                                                         />
@@ -304,7 +304,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                         required
                                                         type="text"
                                                         placeholder="2022 - Present"
-                                                        className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm"
+                                                        className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                                         value={exp.duration}
                                                         onChange={(e) => handleExperienceChange(idx, 'duration', e.target.value)}
                                                     />
@@ -315,7 +315,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                         required
                                                         rows={3}
                                                         placeholder="What were your key contributions?"
-                                                        className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm resize-none"
+                                                        className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm resize-none text-slate-950 placeholder:text-slate-600"
                                                         value={exp.description}
                                                         onChange={(e) => handleExperienceChange(idx, 'description', e.target.value)}
                                                     />
@@ -360,7 +360,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                             required
                                                             type="text"
                                                             placeholder="BSc Computer Science"
-                                                            className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm"
+                                                            className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                                             value={edu.degree}
                                                             onChange={(e) => handleEducationChange(idx, 'degree', e.target.value)}
                                                         />
@@ -371,7 +371,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                             required
                                                             type="text"
                                                             placeholder="University of Excellence"
-                                                            className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm"
+                                                            className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                                             value={edu.institution}
                                                             onChange={(e) => handleEducationChange(idx, 'institution', e.target.value)}
                                                         />
@@ -383,7 +383,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                         required
                                                         type="text"
                                                         placeholder="2018 - 2022"
-                                                        className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm"
+                                                        className="w-full px-4 py-3 bg-white border-2 border-slate-100 rounded-xl focus:border-cyan-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                                         value={edu.year}
                                                         onChange={(e) => handleEducationChange(idx, 'year', e.target.value)}
                                                     />

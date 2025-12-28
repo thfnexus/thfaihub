@@ -112,7 +112,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                         required
                                         type="text"
                                         placeholder="e.g. Pakistan"
-                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm"
+                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                         value={formData.citizenship}
                                         onChange={(e) => setFormData({ ...formData, citizenship: e.target.value })}
                                     />
@@ -122,7 +122,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                         <GraduationCap className="w-3 h-3" /> Current Level
                                     </label>
                                     <select
-                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none"
+                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none text-slate-950"
                                         value={formData.educationLevel}
                                         onChange={(e) => setFormData({ ...formData, educationLevel: e.target.value })}
                                     >
@@ -140,7 +140,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                             required
                                             type="text"
                                             placeholder="Specify your level"
-                                            className="w-full px-4 py-3 mt-2 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm"
+                                            className="w-full px-4 py-3 mt-2 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                             value={formData.otherEducationLevel}
                                             onChange={(e) => setFormData({ ...formData, otherEducationLevel: e.target.value })}
                                         />
@@ -154,7 +154,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                         <Target className="w-3 h-3" /> Target Degree
                                     </label>
                                     <select
-                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none"
+                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none text-slate-950"
                                         value={formData.targetDegree}
                                         onChange={(e) => setFormData({ ...formData, targetDegree: e.target.value })}
                                     >
@@ -169,7 +169,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                             required
                                             type="text"
                                             placeholder="Specify target degree"
-                                            className="w-full px-4 py-3 mt-2 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm"
+                                            className="w-full px-4 py-3 mt-2 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                             value={formData.otherTargetDegree}
                                             onChange={(e) => setFormData({ ...formData, otherTargetDegree: e.target.value })}
                                         />
@@ -183,7 +183,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                         required
                                         type="text"
                                         placeholder="e.g. Computer Science"
-                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm"
+                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                         value={formData.fieldOfStudy}
                                         onChange={(e) => setFormData({ ...formData, fieldOfStudy: e.target.value })}
                                     />
@@ -196,7 +196,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                     required
                                     type="text"
                                     placeholder="e.g. USA, UK, or Germany"
-                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm"
+                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm text-slate-950 placeholder:text-slate-600"
                                     value={formData.destinationCountry}
                                     onChange={(e) => setFormData({ ...formData, destinationCountry: e.target.value })}
                                 />
@@ -206,7 +206,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                 <div className="space-y-2">
                                     <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Funding Type Preference</label>
                                     <select
-                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none"
+                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none text-slate-950"
                                         value={formData.fundingPreference}
                                         onChange={(e) => setFormData({ ...formData, fundingPreference: e.target.value })}
                                     >
@@ -220,7 +220,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                 <div className="space-y-2">
                                     <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Preparation Stage</label>
                                     <select
-                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none"
+                                        className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none text-slate-950"
                                         value={formData.applicationStage}
                                         onChange={(e) => setFormData({ ...formData, applicationStage: e.target.value })}
                                     >
@@ -234,7 +234,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                             <div className="space-y-2">
                                 <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">English Level</label>
                                 <select
-                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none"
+                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none text-slate-950"
                                     value={formData.languageProficiency}
                                     onChange={(e) => setFormData({ ...formData, languageProficiency: e.target.value })}
                                 >
@@ -248,7 +248,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                             <div className="space-y-2 pb-4">
                                 <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Preferred Intake</label>
                                 <select
-                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none"
+                                    className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none text-slate-950"
                                     value={formData.preferredIntake}
                                     onChange={(e) => setFormData({ ...formData, preferredIntake: e.target.value })}
                                 >

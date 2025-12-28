@@ -98,7 +98,7 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                     required
                                     type="text"
                                     placeholder="e.g. Senior Frontend Engineer"
-                                    className="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-red-500 outline-none transition-all font-medium"
+                                    className="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-red-500 outline-none transition-all font-bold text-slate-950 placeholder:text-slate-600"
                                     value={formData.jobRole}
                                     onChange={(e) => setFormData({ ...formData, jobRole: e.target.value })}
                                 />
@@ -110,7 +110,7 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                     required
                                     type="text"
                                     placeholder="e.g. United Kingdom"
-                                    className="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-red-500 outline-none transition-all font-medium"
+                                    className="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-red-500 outline-none transition-all font-bold text-slate-950 placeholder:text-slate-600"
                                     value={formData.country}
                                     onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                                 />
@@ -120,7 +120,7 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                 <label className="text-sm font-black text-slate-700 uppercase tracking-wider">Experience Level</label>
                                 <select
                                     required
-                                    className="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-red-500 outline-none transition-all font-medium appearance-none"
+                                    className="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-red-500 outline-none transition-all font-bold text-slate-950 appearance-none"
                                     value={formData.experienceLevel}
                                     onChange={(e) => setFormData({ ...formData, experienceLevel: e.target.value })}
                                 >
@@ -137,7 +137,7 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                 <input
                                     type="text"
                                     placeholder="e.g. Google, Meta, or Startup"
-                                    className="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-red-500 outline-none transition-all font-medium"
+                                    className="w-full px-5 py-4 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-red-500 outline-none transition-all font-bold text-slate-950 placeholder:text-slate-600"
                                     value={formData.companyName}
                                     onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                                 />

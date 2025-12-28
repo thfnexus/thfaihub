@@ -313,7 +313,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                                 <input
                                     type="text" value={formData.age}
                                     onChange={(e) => handleChange('age', e.target.value)}
-                                    placeholder="e.g. 21" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-medium"
+                                    placeholder="e.g. 21" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                                 />
                             </div>
                             <div>
@@ -321,7 +321,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                                 <input
                                     type="text" value={formData.country}
                                     onChange={(e) => handleChange('country', e.target.value)}
-                                    placeholder="e.g. Pakistan" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-medium"
+                                    placeholder="e.g. Pakistan" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                                 />
                             </div>
                         </div>
@@ -331,7 +331,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                                 value={formData.currentEducationSkills}
                                 onChange={(e) => handleChange('currentEducationSkills', e.target.value)}
                                 placeholder="e.g. Inter Completed, Know Basic Python, Excel"
-                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-medium min-h-[100px]"
+                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600 min-h-[100px]"
                             />
                         </div>
                     </div>
@@ -349,7 +349,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                             <input
                                 type="text" value={formData.futureGoal}
                                 onChange={(e) => handleChange('futureGoal', e.target.value)}
-                                placeholder="e.g. AI Engineer at Top Startup" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-medium"
+                                placeholder="e.g. AI Engineer at Top Startup" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                             />
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -357,7 +357,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                                 <label className="block text-[10px] font-black text-gray-600 uppercase mb-2 tracking-widest">Daily Time Commitment *</label>
                                 <select
                                     value={formData.dailyTimeCommitment} onChange={(e) => handleChange('dailyTimeCommitment', e.target.value)}
-                                    className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-medium appearance-none"
+                                    className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-bold text-gray-950 appearance-none"
                                 >
                                     <option value="">Select Time...</option>
                                     <option value="1-2 hours">1-2 hours (Part-time)</option>
@@ -369,7 +369,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                                 <label className="block text-[10px] font-black text-gray-600 uppercase mb-2 tracking-widest">Preferred Learning Style *</label>
                                 <select
                                     value={formData.learningStyle} onChange={(e) => handleChange('learningStyle', e.target.value)}
-                                    className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-medium appearance-none"
+                                    className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-bold text-gray-950 appearance-none"
                                 >
                                     <option value="">Select Style...</option>
                                     <option value="Theory-based">Theory-based</option>
@@ -395,7 +395,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                                 value={formData.additionalNotes}
                                 onChange={(e) => handleChange('additionalNotes', e.target.value)}
                                 placeholder="Financial constraints, parental concerns, interest in specific tools, etc."
-                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-medium min-h-[150px]"
+                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600 min-h-[150px]"
                             />
                         </div>
                         <div className="bg-slate-900 p-5 rounded-2xl flex items-start gap-4">

@@ -285,7 +285,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                                 <input
                                     type="text" value={formData.ageGrade}
                                     onChange={(e) => handleChange('ageGrade', e.target.value)}
-                                    placeholder="e.g. 18 or 12th Grade" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                    placeholder="e.g. 18 or 12th Grade" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                                 />
                             </div>
                             <div>
@@ -293,7 +293,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                                 <input
                                     type="text" value={formData.country}
                                     onChange={(e) => handleChange('country', e.target.value)}
-                                    placeholder="e.g. Pakistan" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                    placeholder="e.g. Pakistan" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                                 />
                             </div>
                         </div>
@@ -302,7 +302,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                             <input
                                 type="text" value={formData.education}
                                 onChange={(e) => handleChange('education', e.target.value)}
-                                placeholder="e.g. High School Completed" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                placeholder="e.g. High School Completed" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                             />
                         </div>
                     </div>
@@ -320,14 +320,14 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                             <input
                                 type="text" value={formData.desiredCareer}
                                 onChange={(e) => handleChange('desiredCareer', e.target.value)}
-                                placeholder="e.g. Artificial Intelligence Engineer" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                placeholder="e.g. Artificial Intelligence Engineer" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                             />
                         </div>
                         <div>
                             <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Financial Situation / Urgency *</label>
                             <select
                                 value={formData.financialUrgency} onChange={(e) => handleChange('financialUrgency', e.target.value)}
-                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950"
                             >
                                 <option value="">Select...</option>
                                 <option value="Urgent (Need income ASAP)">Urgent (Need income ASAP)</option>
@@ -351,7 +351,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                                 value={formData.currentSkills}
                                 onChange={(e) => handleChange('currentSkills', e.target.value)}
                                 placeholder="e.g. Basic Computer, Photoshop, English Communication"
-                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium min-h-[100px]"
+                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600 min-h-[100px]"
                             />
                         </div>
                         <div>
@@ -360,7 +360,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                                 value={formData.additionalNotes}
                                 onChange={(e) => handleChange('additionalNotes', e.target.value)}
                                 placeholder="Any specific constraints or questions?"
-                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium min-h-[100px]"
+                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600 min-h-[100px]"
                             />
                         </div>
                     </div>

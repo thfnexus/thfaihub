@@ -271,7 +271,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                             <input
                                 type="text" value={formData.fullName}
                                 onChange={(e) => handleChange('fullName', e.target.value)}
-                                placeholder="Your Name" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                placeholder="Your Name" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                             />
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -280,7 +280,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                                 <input
                                     type="text" value={formData.age}
                                     onChange={(e) => handleChange('age', e.target.value)}
-                                    placeholder="e.g. 21" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                    placeholder="e.g. 21" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                                 />
                             </div>
                             <div>
@@ -288,7 +288,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                                 <input
                                     type="text" value={formData.country}
                                     onChange={(e) => handleChange('country', e.target.value)}
-                                    placeholder="e.g. Pakistan" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                    placeholder="e.g. Pakistan" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                                 />
                             </div>
                         </div>
@@ -297,7 +297,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                             <input
                                 type="text" value={formData.education}
                                 onChange={(e) => handleChange('education', e.target.value)}
-                                placeholder="e.g. Undergraduate" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                placeholder="e.g. Undergraduate" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                             />
                         </div>
                         <div>
@@ -305,7 +305,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                             <input
                                 type="text" value={formData.currentField}
                                 onChange={(e) => handleChange('currentField', e.target.value)}
-                                placeholder="e.g. Web Development or Student" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                placeholder="e.g. Web Development or Student" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                             />
                         </div>
                     </div>
@@ -324,14 +324,14 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                                 value={formData.currentSkills}
                                 onChange={(e) => handleChange('currentSkills', e.target.value)}
                                 placeholder="e.g. HTML, CSS, Basic JS, Excel"
-                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium min-h-[120px]"
+                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600 min-h-[120px]"
                             />
                         </div>
                         <div>
                             <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Experience Range *</label>
                             <select
                                 value={formData.experience} onChange={(e) => handleChange('experience', e.target.value)}
-                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950"
                             >
                                 <option value="">Select XP...</option>
                                 <option value="Fresher / Student">Fresher / Student</option>
@@ -355,14 +355,14 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                             <input
                                 type="text" value={formData.futureGoal}
                                 onChange={(e) => handleChange('futureGoal', e.target.value)}
-                                placeholder="e.g. Senior Software Engineer" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                placeholder="e.g. Senior Software Engineer" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600"
                             />
                         </div>
                         <div>
                             <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Financial Situation / Urgency *</label>
                             <select
                                 value={formData.financialUrgency} onChange={(e) => handleChange('financialUrgency', e.target.value)}
-                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950"
                             >
                                 <option value="">Select...</option>
                                 <option value="Urgent (Need income ASAP)">Urgent (Need income ASAP)</option>
@@ -384,7 +384,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                             <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Learning Preference *</label>
                             <select
                                 value={formData.learningPreference} onChange={(e) => handleChange('learningPreference', e.target.value)}
-                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
+                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950"
                             >
                                 <option value="">Select style...</option>
                                 <option value="Video Courses">Video Courses</option>
@@ -400,7 +400,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                                 value={formData.additionalNotes}
                                 onChange={(e) => handleChange('additionalNotes', e.target.value)}
                                 placeholder="e.g. No high-end PC, only mobile, no paid courses"
-                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium min-h-[100px]"
+                                className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-bold text-gray-950 placeholder:text-gray-600 min-h-[100px]"
                             />
                         </div>
                     </div>
