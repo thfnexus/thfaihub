@@ -11,9 +11,16 @@ export default async function ProfilePage() {
     }
 
     // Fetch fresh user data
-    const user = await prisma.user.findUnique({
-        where: { id: session.user.id },
-    });
+    let user;
+    try {
+        user = await prisma.user.findUnique({
+            where: { id: session.user.id },
+        });
+    } catch (error) {
+        console.error("Profile DB Error:", error);
+        // If DB is down, redirect to login
+        redirect("/login");
+    }
 
     if (!user) {
         redirect("/login");
