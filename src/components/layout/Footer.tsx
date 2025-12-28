@@ -25,6 +25,19 @@ export default function Footer() {
                                 THF NEXUS
                             </Link>
                         </p>
+                        <div className="flex gap-4 text-xs font-bold uppercase tracking-wider">
+                            <Link href="/refund" className="hover:text-emerald-400 transition-colors">
+                                Refund Policy
+                            </Link>
+                            <span className="text-slate-700">•</span>
+                            <Link href="/privacy" className="hover:text-blue-400 transition-colors">
+                                Privacy
+                            </Link>
+                            <span className="text-slate-700">•</span>
+                            <Link href="/terms" className="hover:text-blue-400 transition-colors">
+                                Terms
+                            </Link>
+                        </div>
                         <p className="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em]">
                             © 2026 THF NEXUS — All Rights Reserved
                         </p>
