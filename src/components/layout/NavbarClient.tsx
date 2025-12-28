@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X, Coins, Settings, LogOut, User, ChevronDown, BookOpen, Info, Shield, Scale, HelpCircle } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -12,9 +12,25 @@ interface NavbarClientProps {
     logoutAction: () => Promise<void>
 }
 
-export default function NavbarClient({ session, userCredits, isAdmin, logoutAction }: NavbarClientProps) {
+export default function NavbarClient({ session, userCredits: initialCredits, isAdmin: initialIsAdmin, logoutAction }: NavbarClientProps) {
     const [isOpen, setIsOpen] = useState(false)
     const [dropdownOpen, setDropdownOpen] = useState(false)
+    const [credits, setCredits] = useState<number | undefined>(initialCredits)
+    const [isAdmin, setIsAdmin] = useState(initialIsAdmin)
+
+    // Fetch fresh data client-side to avoid build-time DB connection issues
+
+    useEffect(() => {
+        if (session?.user) {
+            fetch('/api/user/me')
+                .then(res => res.json())
+                .then(data => {
+                    if (data.credits !== undefined) setCredits(data.credits)
+                    if (data.role) setIsAdmin(data.role === 'ADMIN')
+                })
+                .catch(err => console.error("Failed to fetch user data", err))
+        }
+    }, [session])
 
     const toggleMenu = () => setIsOpen(!isOpen)
 
@@ -76,9 +92,9 @@ export default function NavbarClient({ session, userCredits, isAdmin, logoutActi
 
                     {session ? (
                         <div className="flex items-center gap-4">
-                            {userCredits !== undefined && (
+                            {credits !== undefined && (
                                 <div className="flex items-center gap-1 bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-bold shadow-sm">
-                                    <Coins className="w-3 h-3" /> {userCredits}
+                                    <Coins className="w-3 h-3" /> {credits}
                                 </div>
                             )}
                             <Link href="/profile" className="flex items-center gap-1.5 text-sm font-bold uppercase tracking-widest transition-colors hover:text-blue-600">
@@ -149,9 +165,9 @@ export default function NavbarClient({ session, userCredits, isAdmin, logoutActi
                     <Link href="/support" onClick={toggleMenu} className="block text-sm font-bold uppercase tracking-widest hover:text-blue-600">Support</Link>
                     {session ? (
                         <>
-                            {userCredits !== undefined && (
+                            {credits !== undefined && (
                                 <div className="flex items-center gap-2 text-sm font-black text-yellow-600 uppercase tracking-widest">
-                                    <Coins className="w-4 h-4" /> Bal: {userCredits}
+                                    <Coins className="w-4 h-4" /> Bal: {credits}
                                 </div>
                             )}
                             <Link href="/profile" onClick={toggleMenu} className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-blue-600">

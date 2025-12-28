@@ -1,27 +1,10 @@
 import { auth, signOut } from "@/auth"
 import NavbarClient from "./NavbarClient"
-import { prisma } from "@/lib/prisma"
-
 export default async function Navbar() {
     const session = await auth()
-    let credits = undefined
-    let isAdmin = false
 
-    if (session?.user?.id) {
-        // try {
-        //     const user = await prisma.user.findUnique({
-        //         where: { id: session.user.id },
-        //         select: { credits: true, role: true }
-        //     })
-        //     if (user) {
-        //         credits = user.credits
-        //         isAdmin = user.role === 'ADMIN'
-        //     }
-        // } catch (error) {
-        //     console.error("Navbar DB Error (handled):", error)
-        //     // Fail silently so build doesn't crash
-        // }
-    }
+    // We fetch detailed user data (credits, role) client-side now
+    // to prevent build-time database connection errors.
 
     async function handleLogout() {
         "use server"
@@ -30,8 +13,11 @@ export default async function Navbar() {
 
     return <NavbarClient
         session={session}
-        userCredits={credits}
-        isAdmin={isAdmin}
+        // We pass undefined initially, Client will fetch fresh data
+        userCredits={undefined}
+        isAdmin={false} // Client will verify admin status
         logoutAction={handleLogout}
     />
 }
+
+
