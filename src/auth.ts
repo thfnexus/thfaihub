@@ -55,18 +55,22 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         async session({ session, token }) {
             if (session.user && token.sub) {
                 session.user.id = token.sub
-                // Fetch fresh data for credits/plan
-                const freshUser = await prisma.user.findUnique({
-                    where: { id: token.sub },
-                    select: { role: true, plan: true, credits: true }
-                })
+                try {
+                    // Fetch fresh data for credits/plan
+                    const freshUser = await prisma.user.findUnique({
+                        where: { id: token.sub },
+                        select: { role: true, plan: true, credits: true }
+                    })
 
-                if (freshUser) {
-                    session.user.role = freshUser.role
-                    session.user.plan = freshUser.plan
-                    // We'll attach credits to the session type if needed, or fetch in component
-                    // For now, let's keep session minimal conform to types, or extend types for credits too.
-                    // Extended types had role/plan. Credits is extra.
+                    if (freshUser) {
+                        session.user.role = freshUser.role
+                        session.user.plan = freshUser.plan
+                        // We'll attach credits to the session type if needed, or fetch in component
+                        // For now, let's keep session minimal conform to types, or extend types for credits too.
+                        // Extended types had role/plan. Credits is extra.
+                    }
+                } catch (error) {
+                    console.error("Auth Session DB Error:", error)
                 }
             }
             return session

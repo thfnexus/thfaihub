@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Home, AlertCircle } from 'lucide-react'
+
+export const dynamic = 'force-dynamic'
 
 export default function NotFound() {
     return (
@@ -7,7 +8,16 @@ export default function NotFound() {
             <div className="bg-white p-8 rounded-2xl shadow-xl max-w-lg w-full border border-slate-100">
                 <div className="flex justify-center mb-6">
                     <div className="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center">
-                        <AlertCircle className="w-10 h-10 text-red-500" />
+                        {/* AlertCircle icon as inline SVG */}
+                        <svg
+                            className="w-10 h-10 text-red-500"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            viewBox="0 0 24 24"
+                        >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v4m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+                        </svg>
                     </div>
                 </div>
 
@@ -23,7 +33,16 @@ export default function NotFound() {
                     href="/"
                     className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-all hover:-translate-y-1 shadow-md hover:shadow-lg w-full sm:w-auto"
                 >
-                    <Home className="w-5 h-5" />
+                    {/* Home icon as inline SVG */}
+                    <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l9-9 9 9M4 10v10h16V10" />
+                    </svg>
                     Back to Home
                 </Link>
             </div>
