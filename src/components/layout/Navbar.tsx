@@ -8,19 +8,19 @@ export default async function Navbar() {
     let isAdmin = false
 
     if (session?.user?.id) {
-        try {
-            const user = await prisma.user.findUnique({
-                where: { id: session.user.id },
-                select: { credits: true, role: true }
-            })
-            if (user) {
-                credits = user.credits
-                isAdmin = user.role === 'ADMIN'
-            }
-        } catch (error) {
-            console.error("Navbar DB Error (handled):", error)
-            // Fail silently so build doesn't crash
-        }
+        // try {
+        //     const user = await prisma.user.findUnique({
+        //         where: { id: session.user.id },
+        //         select: { credits: true, role: true }
+        //     })
+        //     if (user) {
+        //         credits = user.credits
+        //         isAdmin = user.role === 'ADMIN'
+        //     }
+        // } catch (error) {
+        //     console.error("Navbar DB Error (handled):", error)
+        //     // Fail silently so build doesn't crash
+        // }
     }
 
     async function handleLogout() {
