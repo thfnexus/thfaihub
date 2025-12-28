@@ -1,0 +1,55 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum Plan {
+  FREE
+  PRO
+  PREMIUM
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  username  String?  @unique
+  password  String
+  name      String?
+  role      Role     @default(USER)
+  plan      Plan     @default(FREE)
+  credits   Int      @default(0)
+  createdAt DateTime @default(now())
+  logs      UsageLog[]
+}
+
+model UsageLog {
+  id        String   @id @default(cuid())
+  userId    String
+  toolName  String
+  creditsUsed Int
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Scholarship {
+  id                  String   @id @default(cuid())
+  name                String
+  country             String
+  eligible_countries  String[]
+  degree_level        String
+  field               String
+  deadline            DateTime
+  funding_amount      String
+  eligibility_criteria String
+  source_url          String
+  last_verified       DateTime @default(now())
+}
