@@ -2,7 +2,7 @@
 
 import { useActionState } from "react"
 import { updateProfile } from "./actions"
-import { User, Mail, ShieldCheck, Save, Fingerprint, Check, AlertCircle } from "lucide-react"
+import { User, Mail, ShieldCheck, Save, Fingerprint, Check, AlertCircle, RefreshCw, CreditCard, DollarSign } from "lucide-react"
 
 const initialState: { error: string, success: string } = {
     error: "",
@@ -125,6 +125,84 @@ export default function SettingsForm({ user }: { user: any }) {
                                     </button>
                                 </div>
                             </form>
+                        </div>
+
+                        {/* Subscription Management Section */}
+                        <div className="bg-white/70 backdrop-blur-xl border border-white p-8 md:p-10 rounded-[40px] shadow-2xl relative overflow-hidden mt-8">
+                            <div className="absolute -left-20 -top-20 w-64 h-64 bg-emerald-50 rounded-full blur-3xl opacity-50 -z-10"></div>
+
+                            <div className="space-y-8 relative z-10">
+                                {/* Header */}
+                                <div className="flex items-center gap-4 border-b border-slate-100 pb-6">
+                                    <div className="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-600/20">
+                                        <CreditCard className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h2 className="text-2xl font-black uppercase italic tracking-tight text-slate-900">
+                                            Subscription Management
+                                        </h2>
+                                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                                            Manage your neural subscription plan
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Current Plan */}
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="space-y-2">
+                                        <label className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
+                                            <RefreshCw className="w-3 h-3 text-emerald-600" /> Current Plan
+                                        </label>
+                                        <div className="px-5 py-4 border-2 border-slate-100 rounded-2xl bg-white font-black text-slate-700 shadow-sm flex items-center justify-between">
+                                            <span className="text-emerald-600 uppercase text-lg italic">{user.plan || "FREE"}</span>
+                                            {user.plan && user.plan !== "FREE" && (
+                                                <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full font-black">ACTIVE</span>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <label className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
+                                            <Fingerprint className="w-3 h-3 text-blue-600" /> Account Status
+                                        </label>
+                                        <div className="px-5 py-4 border-2 border-slate-100 rounded-2xl bg-white font-bold text-slate-700 shadow-sm">
+                                            <span className="text-blue-600">Active Subscriber</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Actions */}
+                                <div className="flex flex-col md:flex-row gap-4 pt-4">
+                                    <a
+                                        href="/pricing"
+                                        className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-blue-600 text-white rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                                    >
+                                        <CreditCard className="w-4 h-4" />
+                                        Upgrade Plan
+                                    </a>
+                                    <a
+                                        href="/refund"
+                                        className="flex-1 flex items-center justify-center gap-2 px-6 py-4 border-2 border-emerald-200 text-emerald-600 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-emerald-50 transition-all shadow-sm"
+                                    >
+                                        <DollarSign className="w-4 h-4" />
+                                        Request Refund
+                                    </a>
+                                </div>
+
+                                {/* Info Box */}
+                                <div className="bg-blue-50 border border-blue-100 rounded-3xl p-6 mt-6">
+                                    <div className="flex items-start gap-3">
+                                        <AlertCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                                        <div className="space-y-1">
+                                            <p className="text-sm font-black text-blue-900">7-Day Money-Back Guarantee</p>
+                                            <p className="text-xs font-medium text-blue-700 leading-relaxed">
+                                                Not satisfied? Request a full refund within 7 days of your subscription. Visit our{" "}
+                                                <a href="/refund" className="underline hover:text-blue-900">Refund Policy</a> for details.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

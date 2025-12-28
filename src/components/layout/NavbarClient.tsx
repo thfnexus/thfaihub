@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Coins, Settings, LogOut, User, ChevronDown, BookOpen, Info, Shield, Scale, HelpCircle } from "lucide-react"
+import { Menu, X, Coins, Settings, LogOut, User, ChevronDown, BookOpen, Info, Shield, Scale, HelpCircle, DollarSign } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface NavbarClientProps {
@@ -38,6 +38,7 @@ export default function NavbarClient({ session, userCredits: initialCredits, isA
         { name: "About Us", href: "/about", icon: <Info className="w-4 h-4" /> },
         { name: "How It Works", href: "/how-it-works", icon: <HelpCircle className="w-4 h-4" /> },
         { name: "Pricing Explained", href: "/pricing-explained", icon: <BookOpen className="w-4 h-4" /> },
+        { name: "Refund Policy", href: "/refund", icon: <DollarSign className="w-4 h-4" /> },
         { name: "Privacy Policy", href: "/privacy", icon: <Shield className="w-4 h-4" /> },
         { name: "Terms of Service", href: "/terms", icon: <Scale className="w-4 h-4" /> },
     ]
