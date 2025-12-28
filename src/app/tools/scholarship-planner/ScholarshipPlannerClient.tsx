@@ -77,17 +77,17 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                 <h1 className="text-4xl md:text-5xl font-black text-slate-900 uppercase italic tracking-tighter">
                     AI Scholarship <span className="text-emerald-600">Planner</span>
                 </h1>
-                <p className="text-slate-500 text-sm md:text-lg font-medium max-w-2xl mx-auto leading-tight">
+                <p className="text-slate-700 text-sm md:text-lg font-medium max-w-2xl mx-auto leading-tight">
                     Verified, real-world data only. No guessing. No inventing. Protect your future with accurate planning.
                 </p>
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
+                <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">
                     This AI Trained and published by THF NEXUS
                 </p>
                 <div className="flex flex-col items-center gap-4">
-                    <div className="bg-slate-100 px-4 py-2 rounded-full text-sm font-bold text-slate-600 border border-slate-200">
+                    <div className="bg-slate-100 px-4 py-2 rounded-full text-sm font-bold text-slate-700 border border-slate-200">
                         Available Credits: <span className="text-emerald-600">{userCredits}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                    <div className="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-widest">
                         <ShieldCheck className="w-4 h-4 text-emerald-500" />
                         Live Research Mode Active
                     </div>
@@ -105,7 +105,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                                    <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider flex items-center gap-1">
                                         <Globe className="w-3 h-3" /> Citizenship
                                     </label>
                                     <input
@@ -118,7 +118,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                                    <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider flex items-center gap-1">
                                         <GraduationCap className="w-3 h-3" /> Current Level
                                     </label>
                                     <select
@@ -150,7 +150,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
 
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                                    <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider flex items-center gap-1">
                                         <Target className="w-3 h-3" /> Target Degree
                                     </label>
                                     <select
@@ -176,7 +176,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                     )}
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                                    <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider flex items-center gap-1">
                                         <BookOpen className="w-3 h-3" /> Field
                                     </label>
                                     <input
@@ -191,7 +191,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Destination Country</label>
+                                <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Destination Country</label>
                                 <input
                                     required
                                     type="text"
@@ -204,7 +204,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
 
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Funding Type Preference</label>
+                                    <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Funding Type Preference</label>
                                     <select
                                         className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none"
                                         value={formData.fundingPreference}
@@ -215,10 +215,10 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                         <option value="Tuition Only">Tuition Only</option>
                                         <option value="Any">Any</option>
                                     </select>
-                                    <p className="text-[9px] text-slate-400 font-medium">This will not affect eligibility. Used only for guidance.</p>
+                                    <p className="text-[9px] text-slate-500 font-medium">This will not affect eligibility. Used only for guidance.</p>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Preparation Stage</label>
+                                    <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Preparation Stage</label>
                                     <select
                                         className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none"
                                         value={formData.applicationStage}
@@ -232,7 +232,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">English Level</label>
+                                <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">English Level</label>
                                 <select
                                     className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none"
                                     value={formData.languageProficiency}
@@ -246,7 +246,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                             </div>
 
                             <div className="space-y-2 pb-4">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Preferred Intake</label>
+                                <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Preferred Intake</label>
                                 <select
                                     className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-emerald-500 outline-none transition-all font-bold text-sm appearance-none"
                                     value={formData.preferredIntake}
@@ -325,7 +325,7 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
                                                 <Calendar className="w-4 h-4 text-slate-400" />
                                                 <div className="space-y-0.5">
                                                     <p className="text-[10px] font-black text-slate-400 uppercase">Deadline</p>
-                                                    <p className="text-sm font-bold text-slate-700">{item.deadline}</p>
+                                                    <p className="text-sm font-bold text-slate-800">{item.deadline}</p>
                                                 </div>
                                             </div>
                                             <div className="flex items-center gap-3">
@@ -368,22 +368,22 @@ export default function ScholarshipPlannerClient({ userCredits }: ScholarshipPla
 
                                         {/* Eligibility Section */}
                                         <div className="space-y-4">
-                                            <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                                            <h4 className="text-xs font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
                                                 <ShieldCheck className="w-4 h-4 text-emerald-500" /> Eligibility Breakdown
                                             </h4>
                                             <div className="grid gap-4">
                                                 <div className="p-5 bg-emerald-50/50 rounded-2xl space-y-1">
                                                     <p className="text-[10px] font-black text-emerald-700 uppercase">You Qualify Because:</p>
-                                                    <p className="text-sm text-slate-700 font-medium italic">"{item.eligibilityExplanation.qualifications}"</p>
+                                                    <p className="text-sm text-slate-800 font-medium italic">"{item.eligibilityExplanation.qualifications}"</p>
                                                 </div>
                                                 <div className="grid grid-cols-2 gap-4">
                                                     <div className="p-4 bg-slate-50 rounded-2xl space-y-1">
                                                         <p className="text-[10px] font-black text-slate-500 uppercase">Rejection Risks:</p>
-                                                        <p className="text-xs text-slate-600 font-bold leading-relaxed">{item.eligibilityExplanation.rejectionRisks}</p>
+                                                        <p className="text-xs text-slate-700 font-bold leading-relaxed">{item.eligibilityExplanation.rejectionRisks}</p>
                                                     </div>
                                                     <div className="p-4 bg-slate-50 rounded-2xl space-y-1 border border-slate-100">
                                                         <p className="text-[10px] font-black text-slate-500 uppercase">Critical Requirements:</p>
-                                                        <p className="text-xs text-slate-600 font-bold leading-relaxed">{item.eligibilityExplanation.criticalRequirements}</p>
+                                                        <p className="text-xs text-slate-700 font-bold leading-relaxed">{item.eligibilityExplanation.criticalRequirements}</p>
                                                     </div>
                                                 </div>
 

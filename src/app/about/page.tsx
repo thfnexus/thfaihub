@@ -13,7 +13,7 @@ export default function AboutPage() {
                     <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-slate-900 uppercase italic tracking-tighter leading-none">
                         Bridge the <span className="text-blue-600">Gap.</span>
                     </h1>
-                    <p className="text-slate-500 font-bold uppercase tracking-normal md:tracking-[0.25em] text-xs max-w-xl mx-auto leading-relaxed">
+                    <p className="text-slate-700 font-bold uppercase tracking-normal md:tracking-[0.25em] text-xs max-w-xl mx-auto leading-relaxed">
                         Why we built the world's most sophisticated AI Career Navigator for students and parents.
                     </p>
                 </div>
@@ -32,7 +32,7 @@ export default function AboutPage() {
                                     </p>
                                 </div>
                                 <div className="space-y-6">
-                                    <p className="text-slate-600 font-medium leading-relaxed">
+                                    <p className="text-slate-700 font-medium leading-relaxed">
                                         THF AI Hub exists to provide **Career Clarity**. We replace guesswork with data-driven intelligence, helping students navigate the complex landscape of global higher education, scholarships, and the modern job market.
                                     </p>
                                     <div className="flex flex-wrap gap-4 pt-4">
@@ -55,19 +55,19 @@ export default function AboutPage() {
                                         <div className="w-8 h-8 rounded-full bg-blue-600/20 flex items-center justify-center shrink-0">
                                             <div className="w-2 h-2 rounded-full bg-blue-600"></div>
                                         </div>
-                                        <p className="text-slate-400 text-sm font-medium">Synced with 12,000+ accredited universities worldwide.</p>
+                                        <p className="text-slate-300 text-sm font-medium">Synced with 12,000+ accredited universities worldwide.</p>
                                     </div>
                                     <div className="flex items-start gap-4">
                                         <div className="w-8 h-8 rounded-full bg-blue-600/20 flex items-center justify-center shrink-0">
                                             <div className="w-2 h-2 rounded-full bg-blue-600"></div>
                                         </div>
-                                        <p className="text-slate-400 text-sm font-medium">Real-time scholarship tracking across 85 countries.</p>
+                                        <p className="text-slate-300 text-sm font-medium">Real-time scholarship tracking across 85 countries.</p>
                                     </div>
                                     <div className="flex items-start gap-4">
                                         <div className="w-8 h-8 rounded-full bg-blue-600/20 flex items-center justify-center shrink-0">
                                             <div className="w-2 h-2 rounded-full bg-blue-600"></div>
                                         </div>
-                                        <p className="text-slate-400 text-sm font-medium">Neural mapping of 500+ emerging tech career paths.</p>
+                                        <p className="text-slate-300 text-sm font-medium">Neural mapping of 500+ emerging tech career paths.</p>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@ export default function AboutPage() {
                                     <Building2 className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-black text-slate-900 uppercase italic tracking-tight">Built by THF Nexus</h3>
-                                <p className="text-slate-500 font-medium leading-relaxed">
+                                <p className="text-slate-700 font-medium leading-relaxed">
                                     THF AI Hub is a flagship product of the **THF Nexus** ecosystem—a global leader in engineering human-centric AI solutions. We don't just use AI; we train it to understand the nuances of human ambition.
                                 </p>
                             </div>

@@ -51,7 +51,7 @@ export default function PricingPage() {
         <div className="py-20 px-4">
             <div className="container mx-auto max-w-6xl">
                 <h1 className="text-4xl font-bold text-center mb-4">Simple Pricing</h1>
-                <p className="text-center text-gray-600 mb-12">Checking out our beta? Pricing may change.</p>
+                <p className="text-center text-gray-800 mb-12">Checking out our beta? Pricing may change.</p>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch mb-12">
                     {plans.map((plan) => (
@@ -75,12 +75,12 @@ export default function PricingPage() {
                             </h3>
                             <div className="flex items-baseline gap-1 mb-6">
                                 <span className="text-4xl font-black">{plan.price}</span>
-                                <span className={`text-sm font-bold uppercase tracking-widest ${plan.highlight ? "text-slate-400" : "text-slate-500"}`}>
+                                <span className={`text-sm font-bold uppercase tracking-widest ${plan.highlight ? "text-slate-300" : "text-slate-700"}`}>
                                     /month
                                 </span>
                             </div>
 
-                            <p className={`text-sm font-medium mb-8 leading-relaxed ${plan.highlight ? "text-slate-300" : "text-slate-500"}`}>
+                            <p className={`text-sm font-medium mb-8 leading-relaxed ${plan.highlight ? "text-slate-200" : "text-slate-700"}`}>
                                 {plan.description}
                             </p>
 
@@ -88,7 +88,7 @@ export default function PricingPage() {
                                 {plan.features.map((feature) => (
                                     <li key={feature} className="flex items-start gap-3 text-sm font-bold">
                                         <Check className={`w-5 h-5 flex-shrink-0 ${plan.highlight ? "text-cyan-400" : "text-emerald-500"}`} />
-                                        <span className={plan.highlight ? "text-slate-200" : "text-slate-600"}>{feature}</span>
+                                        <span className={plan.highlight ? "text-slate-100" : "text-slate-800"}>{feature}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -119,7 +119,7 @@ export default function PricingPage() {
                             <h2 className="text-3xl md:text-4xl font-black text-slate-900 uppercase italic tracking-tighter">
                                 Need More <span className="text-cyan-600">Extra Credits?</span>
                             </h2>
-                            <p className="text-slate-500 font-medium max-w-xl leading-relaxed">
+                            <p className="text-slate-700 font-medium max-w-xl leading-relaxed">
                                 Looking for a custom bulk package or enterprise-grade neural access? Our team can architect a personalized plan tailored to your specific career goals.
                             </p>
                         </div>

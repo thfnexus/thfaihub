@@ -179,7 +179,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                 <div className="bg-white p-8 rounded-xl border shadow-sm text-center">
                     <AlertTriangle className="w-16 h-16 mx-auto text-yellow-500 mb-4" />
                     <h2 className="text-2xl font-bold mb-2">Insufficient Credits</h2>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-800 mb-6">
                         You need credits to use this tool. Upgrade your plan to get more credits!
                     </p>
                     <a href="/pricing" className="inline-block bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800">
@@ -238,16 +238,16 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                         </h3>
                         <div className="space-y-4">
                             <div>
-                                <h4 className="font-bold text-sm text-gray-500 mb-1">Months 1-3</h4>
-                                <p className="text-sm">{guidance.roadmap.months1to3}</p>
+                                <h4 className="font-bold text-sm text-gray-700 mb-1">Months 1-3</h4>
+                                <p className="text-sm text-gray-900">{guidance.roadmap.months1to3}</p>
                             </div>
                             <div>
-                                <h4 className="font-bold text-sm text-gray-500 mb-1">Months 4-6</h4>
-                                <p className="text-sm">{guidance.roadmap.months4to6}</p>
+                                <h4 className="font-bold text-sm text-gray-700 mb-1">Months 4-6</h4>
+                                <p className="text-sm text-gray-900">{guidance.roadmap.months4to6}</p>
                             </div>
                             <div>
-                                <h4 className="font-bold text-sm text-gray-500 mb-1">Months 7-12</h4>
-                                <p className="text-sm">{guidance.roadmap.months7to12}</p>
+                                <h4 className="font-bold text-sm text-gray-700 mb-1">Months 7-12</h4>
+                                <p className="text-sm text-gray-900">{guidance.roadmap.months7to12}</p>
                             </div>
                         </div>
                     </div>
@@ -262,11 +262,11 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             <div className="space-y-4">
                                 <div className="p-3 bg-green-50 rounded-lg border border-green-100">
                                     <h4 className="font-bold text-xs text-green-700 uppercase mb-1">Start This Week</h4>
-                                    <p className="text-sm">{guidance.finalAdvice.startThisWeek}</p>
+                                    <p className="text-sm text-gray-900">{guidance.finalAdvice.startThisWeek}</p>
                                 </div>
                                 <div className="p-3 bg-red-50 rounded-lg border border-red-100">
                                     <h4 className="font-bold text-xs text-red-700 uppercase mb-1">Avoid / Stop</h4>
-                                    <p className="text-sm">{guidance.finalAdvice.avoid}</p>
+                                    <p className="text-sm text-gray-900">{guidance.finalAdvice.avoid}</p>
                                 </div>
                             </div>
                         </div>
@@ -287,8 +287,8 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                         </div>
                     </div>
                 </div>
-                <div className="text-center py-8 opacity-40">
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em]">This AI Trained and published by THF NEXUS</p>
+                <div className="text-center py-8 opacity-70">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-600">This AI Trained and published by THF NEXUS</p>
                 </div>
             </div>
         )
@@ -301,13 +301,13 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
             <div className="bg-white p-8 rounded-xl border shadow-sm">
                 <div className="text-center mb-6">
                     <Sparkles className="w-12 h-12 mx-auto text-blue-600 mb-3" />
-                    <h2 className="text-3xl font-extrabold text-gray-900 tracking-tighter uppercase italic">AI Career Counselor</h2>
-                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mt-2">This AI Trained and published by THF NEXUS</p>
+                    <h2 className="text-3xl font-extrabold text-gray-950 tracking-tighter uppercase italic">AI Career Counselor</h2>
+                    <p className="text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] mt-2">This AI Trained and published by THF NEXUS</p>
                 </div>
 
                 {/* Progress Bar */}
                 <div className="mb-8">
-                    <div className="flex justify-between mb-2 text-sm text-gray-600">
+                    <div className="flex justify-between mb-2 text-sm text-gray-700">
                         <span>Step {currentStep} of {totalSteps}</span>
                         <span>{Math.round((currentStep / totalSteps) * 100)}%</span>
                     </div>
@@ -328,9 +328,9 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                 {/* Step 1: Basics */}
                 {currentStep === 1 && (
                     <div className="space-y-4">
-                        <h3 className="font-bold text-lg mb-4">Basic Information</h3>
+                        <h3 className="font-bold text-lg mb-4 text-gray-950">Basic Information</h3>
                         <div>
-                            <label className="block text-sm font-medium mb-2">Age</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Age</label>
                             <input
                                 type="number"
                                 value={formData.age}
@@ -340,7 +340,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium mb-2">Country</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Country</label>
                             <input
                                 type="text"
                                 value={formData.country}
@@ -350,7 +350,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-medium mb-2">Current Education</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Current Education</label>
                             <select
                                 value={formData.education}
                                 onChange={(e) => {
@@ -383,9 +383,9 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                 {/* Step 2: Interest & Mindset */}
                 {currentStep === 2 && (
                     <div className="space-y-4">
-                        <h3 className="font-bold text-lg mb-4">Interest & Mindset</h3>
+                        <h3 className="font-bold text-lg mb-4 text-gray-950">Interest & Mindset</h3>
                         <div>
-                            <label className="block text-sm font-medium mb-2">Primary Interest</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Primary Interest</label>
                             <select
                                 value={formData.primaryInterest}
                                 onChange={(e) => {
@@ -415,7 +415,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             )}
                         </div>
                         <div>
-                            <label className="block text-sm font-medium mb-2">Work Style Preference</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Work Style Preference</label>
                             <select
                                 value={formData.workStyle}
                                 onChange={(e) => handleChange('workStyle', e.target.value)}
@@ -427,7 +427,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             </select>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium mb-2">Preferred Work Type</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Preferred Work Type</label>
                             <select
                                 value={formData.workType}
                                 onChange={(e) => handleChange('workType', e.target.value)}
@@ -445,10 +445,10 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                 {/* Step 3: Hard Skills & Self Assessment */}
                 {currentStep === 3 && (
                     <div className="space-y-4">
-                        <h3 className="font-bold text-lg mb-4">Self Assessment (Be Honest)</h3>
+                        <h3 className="font-bold text-lg mb-4 text-gray-950">Self Assessment (Be Honest)</h3>
                         <div className="grid md:grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium mb-2">Math Level</label>
+                                <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Math Level</label>
                                 <select
                                     value={formData.mathLevel}
                                     onChange={(e) => handleChange('mathLevel', e.target.value)}
@@ -461,7 +461,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                                 </select>
                             </div>
                             <div>
-                                <label className="block text-sm font-medium mb-2">English Level</label>
+                                <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">English Level</label>
                                 <select
                                     value={formData.englishLevel}
                                     onChange={(e) => handleChange('englishLevel', e.target.value)}
@@ -475,7 +475,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             </div>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium mb-2">Financial Situation / Urgency</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Financial Situation / Urgency</label>
                             <select
                                 value={formData.financialUrgency}
                                 onChange={(e) => handleChange('financialUrgency', e.target.value)}
@@ -488,7 +488,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             </select>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium mb-2">Communication & Confidence</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Communication & Confidence</label>
                             <select
                                 value={formData.communicationLevel}
                                 onChange={(e) => handleChange('communicationLevel', e.target.value)}
@@ -506,9 +506,9 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                 {/* Step 4: Final Goals & Notes */}
                 {currentStep === 4 && (
                     <div className="space-y-4">
-                        <h3 className="font-bold text-lg mb-4">Final Objective</h3>
+                        <h3 className="font-bold text-lg mb-4 text-gray-950">Final Objective</h3>
                         <div>
-                            <label className="block text-sm font-medium mb-2">What is your primary goal?</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">What is your primary goal?</label>
                             <select
                                 value={formData.primaryGoal}
                                 onChange={(e) => {
@@ -536,7 +536,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                             )}
                         </div>
                         <div>
-                            <label className="block text-sm font-medium mb-2">Additional Notes / Questions (Optional)</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Additional Notes / Questions (Optional)</label>
                             <textarea
                                 value={formData.additionalNotes}
                                 onChange={(e) => handleChange('additionalNotes', e.target.value)}
@@ -552,7 +552,7 @@ export default function CareerCounselorClient({ userCredits }: { userCredits: nu
                     <button
                         onClick={prevStep}
                         disabled={currentStep === 1 || loading}
-                        className="flex items-center gap-2 px-4 py-2 text-gray-400 hover:text-black disabled:opacity-30"
+                        className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-black disabled:opacity-30"
                     >
                         <ChevronLeft className="w-4 h-4" />
                         Back

@@ -68,7 +68,7 @@ export default function Home() {
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-slate-900 mb-8 italic uppercase">
           THF AI <span className="text-blue-600">Hub</span>
         </h1>
-        <p className="text-xl md:text-2xl text-slate-500 max-w-2xl mx-auto mb-10 font-medium">
+        <p className="text-xl md:text-2xl text-slate-700 max-w-2xl mx-auto mb-10 font-medium">
           The World's Most Advanced AI Career Architecture Suite. One Platform. One Account.
         </p>
         <div className="flex flex-col md:flex-row gap-5 justify-center">
@@ -80,7 +80,7 @@ export default function Home() {
           </Link>
           <Link
             href="/pricing"
-            className="px-10 py-4 border-2 border-slate-200 rounded-2xl font-black uppercase tracking-widest text-slate-600 hover:bg-slate-50 transition-all shadow-sm hover:shadow-md hover:-translate-y-1"
+            className="px-10 py-4 border-2 border-slate-200 rounded-2xl font-black uppercase tracking-widest text-slate-800 hover:bg-slate-50 transition-all shadow-sm hover:shadow-md hover:-translate-y-1"
           >
             View Pricing
           </Link>
@@ -114,7 +114,7 @@ export default function Home() {
               <h3 className="text-xl font-black mb-2 text-slate-900 group-hover:text-blue-600 transition-colors uppercase tracking-tight">
                 {tool.name}
               </h3>
-              <p className="text-slate-500 text-sm font-medium leading-relaxed">{tool.description}</p>
+              <p className="text-slate-700 text-sm font-medium leading-relaxed">{tool.description}</p>
             </Link>
           ))}
         </div>

@@ -74,17 +74,17 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                 <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase italic leading-[0.9]">
                     AI Course <span className="text-indigo-600">Recommender</span>
                 </h1>
-                <p className="text-slate-500 font-bold text-lg md:text-xl max-w-2xl mx-auto leading-tight">
+                <p className="text-slate-700 font-bold text-lg md:text-xl max-w-2xl mx-auto leading-tight">
                     Audited recommendations for 2026. Stop wasting time on low-value certificates.
                 </p>
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
+                <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">
                     This AI Trained and published by THF NEXUS
                 </p>
                 <div className="flex flex-col items-center gap-4">
-                    <div className="bg-slate-100 px-4 py-2 rounded-full text-sm font-bold text-slate-600 border border-slate-200">
+                    <div className="bg-slate-100 px-4 py-2 rounded-full text-sm font-bold text-slate-700 border border-slate-200">
                         Available Credits: <span className="text-indigo-600">{userCredits}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">
+                    <div className="flex items-center gap-2 text-[10px] font-black text-slate-500 uppercase tracking-widest leading-none">
                         <ShieldCheck className="w-4 h-4 text-emerald-500" />
                         AI Quality Filter Active: Removing Generic Content
                     </div>
@@ -99,7 +99,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                 <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6 lg:sticky lg:top-12">
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                            <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider flex items-center gap-1">
                                 <Zap className="w-3 h-3" /> Current Skills
                             </label>
                             <input
@@ -113,7 +113,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                            <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider flex items-center gap-1">
                                 <Target className="w-3 h-3" /> Target Role / Goal
                             </label>
                             <input
@@ -128,7 +128,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
 
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Budget Limit</label>
+                                <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Budget Limit</label>
                                 <select
                                     className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm appearance-none"
                                     value={formData.budgetLimit}
@@ -141,7 +141,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                 </select>
                             </div>
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Time / Week</label>
+                                <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Time / Week</label>
                                 <select
                                     className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm appearance-none"
                                     value={formData.timeCommitment}
@@ -156,7 +156,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                         </div>
 
                         <div className="space-y-2 pb-4">
-                            <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Platform Preference</label>
+                            <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Platform Preference</label>
                             <select
                                 className="w-full px-4 py-3 bg-slate-50 border-2 border-slate-100 rounded-xl focus:border-indigo-500 outline-none transition-all font-bold text-sm appearance-none"
                                 value={formData.platformPreference}
@@ -228,7 +228,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                         </div>
                                         <div className="space-y-1">
                                             {item.hostUniversity && (
-                                                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">
+                                                <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">
                                                     {item.hostUniversity}
                                                 </p>
                                             )}
@@ -244,7 +244,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                                 <DollarSign className="w-4 h-4 text-emerald-400" />
                                             </div>
                                             <div className="space-y-0.5">
-                                                <p className="text-[10px] font-black text-slate-500 uppercase">Investment</p>
+                                                <p className="text-[10px] font-black text-slate-300 uppercase">Investment</p>
                                                 <p className="text-sm font-bold text-white uppercase tracking-tighter">{item.cost}</p>
                                             </div>
                                         </div>
@@ -253,7 +253,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                                 <Clock className="w-4 h-4 text-indigo-400" />
                                             </div>
                                             <div className="space-y-0.5">
-                                                <p className="text-[10px] font-black text-slate-500 uppercase">Duration</p>
+                                                <p className="text-[10px] font-black text-slate-300 uppercase">Duration</p>
                                                 <p className="text-sm font-bold text-white uppercase tracking-tighter">{item.duration}</p>
                                             </div>
                                         </div>
@@ -262,10 +262,10 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                                 <Award className="w-4 h-4 text-amber-400" />
                                             </div>
                                             <div className="space-y-0.5">
-                                                <p className="text-[10px] font-black text-slate-500 uppercase">Cert Value</p>
+                                                <p className="text-[10px] font-black text-slate-300 uppercase">Cert Value</p>
                                                 <p className={cn(
                                                     "text-sm font-bold uppercase tracking-tighter",
-                                                    item.certificateValue === 'High' ? "text-emerald-400" : "text-slate-400"
+                                                    item.certificateValue === 'High' ? "text-emerald-400" : "text-slate-100"
                                                 )}>{item.certificateValue}</p>
                                             </div>
                                         </div>
@@ -290,7 +290,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                             <p className="text-2xl font-black text-slate-900 tracking-tighter italic leading-none">{item.roiMetrics.salaryPotential}</p>
                                         </div>
                                         <div className="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between">
-                                            <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Market Demand</p>
+                                            <p className="text-[10px] font-black text-slate-700 uppercase tracking-widest">Market Demand</p>
                                             <div className="flex items-center gap-2">
                                                 <span className={cn(
                                                     "w-2 h-2 rounded-full",
@@ -300,7 +300,7 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                             </div>
                                         </div>
                                         <div className="p-5 bg-slate-900 rounded-2xl flex flex-col justify-between">
-                                            <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest leading-none">Job Readiness</p>
+                                            <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-none">Job Readiness</p>
                                             <p className="text-xl font-black text-white italic tracking-tighter uppercase">{item.timeToOutcome}</p>
                                         </div>
                                     </div>
@@ -308,13 +308,13 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                     {/* Pros & Cons Audit */}
                                     <div className="grid md:grid-cols-2 gap-8">
                                         <div className="space-y-4">
-                                            <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                                            <h4 className="text-xs font-black text-slate-700 uppercase tracking-widest flex items-center gap-2">
                                                 <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Strategic Pros
                                             </h4>
                                             <p className="text-sm text-slate-700 font-bold leading-relaxed italic pr-4">"{item.pros}"</p>
 
                                             <div className="space-y-2 mt-4 pt-4 border-t border-slate-100">
-                                                <p className="text-[10px] font-black text-slate-400 uppercase">Core Curriculum Outcomes</p>
+                                                <p className="text-[10px] font-black text-slate-700 uppercase">Core Curriculum Outcomes</p>
                                                 <div className="flex flex-wrap gap-2">
                                                     {item.curriculumHighlights.map((topic, idx) => (
                                                         <span key={idx} className="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-lg border border-slate-200 uppercase tracking-tighter">
@@ -326,14 +326,14 @@ export default function CourseRecommenderClient({ userCredits }: CourseRecommend
                                         </div>
 
                                         <div className="space-y-4 border-l-0 md:border-l border-slate-100 md:pl-8">
-                                            <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                                            <h4 className="text-xs font-black text-slate-700 uppercase tracking-widest flex items-center gap-2">
                                                 <AlertCircle className="w-4 h-4 text-red-500" /> Honest Audit (Cons)
                                             </h4>
                                             <p className="text-sm text-slate-700 font-bold leading-relaxed italic pr-4 border-l-2 border-red-500 pl-4 bg-red-50/30 py-2 rounded-r-xl">"{item.cons}"</p>
 
                                             <div className="bg-slate-900 p-5 rounded-2xl mt-4 relative overflow-hidden group">
                                                 <div className="absolute inset-0 bg-indigo-500/10 group-hover:bg-indigo-500/20 transition-colors" />
-                                                <p className="text-[10px] font-black text-slate-400 uppercase flex items-center gap-1 mb-2 relative">
+                                                <p className="text-[10px] font-black text-slate-200 uppercase flex items-center gap-1 mb-2 relative">
                                                     <TrendingUp className="w-3 h-3 text-indigo-400" /> Career Advisory
                                                 </p>
                                                 <p className="text-xs text-white font-bold leading-relaxed relative">

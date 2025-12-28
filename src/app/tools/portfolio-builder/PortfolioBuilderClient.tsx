@@ -161,14 +161,14 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                 <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase italic leading-[0.9]">
                     AI Portfolio <span className="text-cyan-600">Architect</span>
                 </h1>
-                <p className="text-slate-500 font-bold text-lg md:text-xl max-w-2xl mx-auto leading-tight">
+                <p className="text-slate-700 font-bold text-lg md:text-xl max-w-2xl mx-auto leading-tight">
                     Convert your raw experience into a high-impact professional portfolio blueprint designed for 2026.
                 </p>
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
+                <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">
                     This AI Trained and published by THF NEXUS
                 </p>
                 <div className="flex flex-col items-center gap-4">
-                    <div className="bg-slate-100 px-4 py-2 rounded-full text-sm font-bold text-slate-600 border border-slate-200">
+                    <div className="bg-slate-100 px-4 py-2 rounded-full text-sm font-bold text-slate-700 border border-slate-200">
                         Available Credits: <span className="text-cyan-600">{userCredits}</span>
                     </div>
                 </div>
@@ -192,7 +192,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                     </div>
                                     <span className={cn(
                                         "text-[10px] uppercase font-black tracking-widest hidden md:block",
-                                        step === s ? "text-cyan-600" : "text-slate-400"
+                                        step === s ? "text-cyan-600" : "text-slate-600"
                                     )}>
                                         {s === 1 ? 'Profile' : s === 2 ? 'Experience' : s === 3 ? 'Education' : s === 4 ? 'Projects' : 'Skills'}
                                     </span>
@@ -210,7 +210,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                         </h3>
                                         <div className="grid md:grid-cols-2 gap-4">
                                             <div className="space-y-2">
-                                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Full Name</label>
+                                                <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Full Name</label>
                                                 <input
                                                     required
                                                     type="text"
@@ -221,7 +221,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                 />
                                             </div>
                                             <div className="space-y-2">
-                                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Target Role</label>
+                                                <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Target Role</label>
                                                 <input
                                                     required
                                                     type="text"
@@ -233,7 +233,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                             </div>
                                         </div>
                                         <div className="space-y-2">
-                                            <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Brief Bio</label>
+                                            <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Brief Bio</label>
                                             <textarea
                                                 required
                                                 rows={4}
@@ -276,7 +276,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                 )}
                                                 <div className="grid md:grid-cols-2 gap-4 mb-4">
                                                     <div className="space-y-2">
-                                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Role</label>
+                                                        <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Role</label>
                                                         <input
                                                             required
                                                             type="text"
@@ -287,7 +287,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                         />
                                                     </div>
                                                     <div className="space-y-2">
-                                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Company</label>
+                                                        <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Company</label>
                                                         <input
                                                             required
                                                             type="text"
@@ -299,7 +299,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                     </div>
                                                 </div>
                                                 <div className="space-y-2 mb-4">
-                                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Duration</label>
+                                                    <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Duration</label>
                                                     <input
                                                         required
                                                         type="text"
@@ -310,7 +310,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                     />
                                                 </div>
                                                 <div className="space-y-2">
-                                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Main Achievements/Tasks</label>
+                                                    <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Main Achievements/Tasks</label>
                                                     <textarea
                                                         required
                                                         rows={3}
@@ -355,7 +355,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                 )}
                                                 <div className="grid md:grid-cols-2 gap-4">
                                                     <div className="space-y-2">
-                                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Degree</label>
+                                                        <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Degree</label>
                                                         <input
                                                             required
                                                             type="text"
@@ -366,7 +366,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                         />
                                                     </div>
                                                     <div className="space-y-2">
-                                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Institution</label>
+                                                        <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Institution</label>
                                                         <input
                                                             required
                                                             type="text"
@@ -378,7 +378,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                     </div>
                                                 </div>
                                                 <div className="mt-4 space-y-2">
-                                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Year</label>
+                                                    <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Year</label>
                                                     <input
                                                         required
                                                         type="text"
@@ -423,7 +423,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                 )}
                                                 <div className="grid md:grid-cols-2 gap-4 mb-4">
                                                     <div className="space-y-2">
-                                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Project Name</label>
+                                                        <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Project Name</label>
                                                         <input
                                                             required
                                                             type="text"
@@ -434,7 +434,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                         />
                                                     </div>
                                                     <div className="space-y-2">
-                                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Tech Stack</label>
+                                                        <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Tech Stack</label>
                                                         <input
                                                             required
                                                             type="text"
@@ -446,7 +446,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                     </div>
                                                 </div>
                                                 <div className="space-y-2">
-                                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Short Description</label>
+                                                    <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Short Description</label>
                                                     <textarea
                                                         required
                                                         rows={3}
@@ -470,7 +470,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                             <Sparkles className="w-5 h-5 text-cyan-500" /> Technical Skills
                                         </h3>
                                         <div className="space-y-2">
-                                            <label className="text-[10px] font-black text-slate-400 uppercase tracking-wider">Main Skills (Comma separated)</label>
+                                            <label className="text-[10px] font-black text-slate-700 uppercase tracking-wider">Main Skills (Comma separated)</label>
                                             <textarea
                                                 required
                                                 rows={4}
@@ -500,7 +500,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                     <button
                                         type="button"
                                         onClick={prevStep}
-                                        className="px-6 py-3 bg-slate-100 text-slate-600 rounded-xl font-black uppercase tracking-widest hover:bg-slate-200 transition-all text-xs"
+                                        className="px-6 py-3 bg-slate-100 text-slate-700 rounded-xl font-black uppercase tracking-widest hover:bg-slate-200 transition-all text-xs"
                                     >
                                         Back
                                     </button>
@@ -578,7 +578,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                         </button>
                                     </div>
                                 </div>
-                                <div className="bg-white/5 backdrop-blur-md p-6 rounded-[32px] border border-white/10 italic font-bold text-slate-300 leading-relaxed text-lg">
+                                <div className="bg-white/10 backdrop-blur-md p-6 rounded-[32px] border border-white/10 italic font-bold text-slate-100 leading-relaxed text-lg">
                                     "{results.optimizedBio}"
                                 </div>
                             </div>
@@ -600,7 +600,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                         <p className="text-cyan-600 font-black text-xs uppercase tracking-widest">{exp.company} • {exp.duration}</p>
                                                     </div>
                                                 </div>
-                                                <div className="p-4 bg-slate-50 rounded-2xl text-sm text-slate-600 font-bold leading-relaxed">
+                                                <div className="p-4 bg-slate-50 rounded-2xl text-sm text-slate-700 font-bold leading-relaxed">
                                                     {exp.description}
                                                 </div>
                                             </div>
@@ -622,7 +622,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                             <h4 className="text-2xl font-black text-slate-900 uppercase tracking-tighter italic">{proj.name}</h4>
                                                             <div className="flex flex-wrap gap-2 pt-1">
                                                                 {proj.techStack.split(',').map((tech, idx) => (
-                                                                    <span key={idx} className="bg-slate-100 text-slate-500 text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-widest">
+                                                                    <span key={idx} className="bg-slate-100 text-slate-600 text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-widest">
                                                                         {tech.trim()}
                                                                     </span>
                                                                 ))}
@@ -634,14 +634,14 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                     </div>
 
                                                     <div className="p-6 bg-slate-50 rounded-3xl space-y-3">
-                                                        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">STAR Method Description</p>
+                                                        <p className="text-[10px] font-black text-slate-700 uppercase tracking-widest">STAR Method Description</p>
                                                         <p className="text-sm text-slate-700 font-bold leading-relaxed">{proj.impactDescription}</p>
                                                     </div>
 
                                                     <div className="grid md:grid-cols-2 gap-4">
                                                         <div className="p-5 bg-cyan-50 rounded-3xl border border-cyan-100 space-y-3">
                                                             <div className="flex items-center justify-between">
-                                                                <p className="text-[10px] font-black text-cyan-700 uppercase tracking-widest flex items-center gap-2">
+                                                                <p className="text-[10px] font-black text-cyan-800 uppercase tracking-widest flex items-center gap-2">
                                                                     <FileText className="w-3 h-3" /> Resume Point
                                                                 </p>
                                                                 <button
@@ -651,13 +651,13 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                                     {copied === `resume-${i}` ? <CheckCircle2 className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                                                                 </button>
                                                             </div>
-                                                            <p className="text-xs text-slate-600 font-bold leading-relaxed italic">{proj.resumeSummary}</p>
+                                                            <p className="text-xs text-slate-700 font-bold leading-relaxed italic">{proj.resumeSummary}</p>
                                                         </div>
 
                                                         <div className="border border-slate-100 rounded-3xl p-5 flex flex-col justify-center gap-4">
                                                             <button
                                                                 onClick={() => setExpandedProject(expandedProject === i ? null : i)}
-                                                                className="w-full flex items-center justify-between text-[10px] font-black uppercase text-slate-400 hover:text-slate-900 transition-all tracking-widest"
+                                                                className="w-full flex items-center justify-between text-[10px] font-black uppercase text-slate-500 hover:text-slate-900 transition-all tracking-widest"
                                                             >
                                                                 <span className="flex items-center gap-2 italic underline underline-offset-4 decoration-cyan-500 decoration-2">
                                                                     Technical README Skeleton
@@ -699,10 +699,10 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                     <div className="bg-white p-8 rounded-[40px] border border-slate-100 shadow-sm space-y-6">
                                         {results.skillsMatrix.map((matrix, i) => (
                                             <div key={i} className="space-y-3 pb-6 border-b border-slate-50 last:border-0 last:pb-0">
-                                                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{matrix.category}</p>
+                                                <p className="text-[10px] font-black text-slate-700 uppercase tracking-widest">{matrix.category}</p>
                                                 <div className="flex flex-wrap gap-2">
                                                     {matrix.skills.map((skill, idx) => (
-                                                        <span key={idx} className="bg-slate-50 text-slate-600 text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-100">
+                                                        <span key={idx} className="bg-slate-50 text-slate-800 text-xs font-bold px-3 py-1.5 rounded-xl border border-slate-100">
                                                             {skill}
                                                         </span>
                                                     ))}
@@ -724,17 +724,17 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                                 style={{ backgroundColor: results.designAdvice.themeColor }}
                                             />
                                             <div>
-                                                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Core Theme Color</p>
+                                                <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Core Theme Color</p>
                                                 <p className="text-xl font-black italic uppercase italic text-cyan-400">{results.designAdvice.themeColor}</p>
                                             </div>
                                         </div>
                                         <div className="space-y-4 pt-4 border-t border-white/5">
                                             <div>
-                                                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Typography</p>
+                                                <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-1">Typography</p>
                                                 <p className="text-sm font-bold text-slate-200">{results.designAdvice.typography}</p>
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Layout Strategy</p>
+                                                <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-1">Layout Strategy</p>
                                                 <p className="text-sm font-bold text-slate-200">{results.designAdvice.layoutSuggestion}</p>
                                             </div>
                                         </div>
@@ -751,7 +751,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
                                             <ShieldCheck className="w-5 h-5" />
                                             <p className="text-xs font-black uppercase tracking-widest">Architect's Forecast</p>
                                         </div>
-                                        <p className="text-sm text-slate-600 font-bold leading-relaxed italic">
+                                        <p className="text-sm text-slate-800 font-bold leading-relaxed italic">
                                             {results.marketAnalysis}
                                         </p>
                                     </div>
@@ -761,7 +761,7 @@ export default function PortfolioBuilderClient({ userCredits }: PortfolioBuilder
 
                         {/* Footer Advice */}
                         <div className="text-center pb-12 print:hidden">
-                            <p className="text-slate-400 text-xs font-bold uppercase tracking-widest">Ready to build? Copy the blueprint and start your development phase.</p>
+                            <p className="text-slate-600 text-xs font-bold uppercase tracking-widest">Ready to build? Copy the blueprint and start your development phase.</p>
                         </div>
 
                         {/* Print Only Branding Page */}

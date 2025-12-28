@@ -101,8 +101,8 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
             <div className="max-w-2xl mx-auto text-center py-12">
                 <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8">
                     <GraduationCap className="w-16 h-16 mx-auto text-yellow-600 mb-4" />
-                    <h2 className="text-2xl font-bold mb-2 text-gray-900">Credits Exhausted</h2>
-                    <p className="text-gray-600 mb-6">You need at least 1 credit to perform a Degree vs Skill analysis.</p>
+                    <h2 className="text-2xl font-bold mb-2 text-gray-950">Credits Exhausted</h2>
+                    <p className="text-gray-800 mb-6">You need at least 1 credit to perform a Degree vs Skill analysis.</p>
                     <a href="/pricing" className="inline-block bg-black text-white px-8 py-3 rounded-xl font-medium hover:bg-gray-800 transition-all">
                         Upgrade Plan
                     </a>
@@ -119,8 +119,8 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                         <div className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest w-fit mb-2">
                             {analysis.verdict === 'Skill-heavy' ? 'Prioritize Skills' : 'Degree Recommended'}
                         </div>
-                        <h2 className="text-3xl font-bold text-gray-900 italic uppercase">Degree vs Skill Analysis</h2>
-                        <p className="text-gray-500 font-medium">Comparison for {formData.desiredCareer}</p>
+                        <h2 className="text-3xl font-bold text-gray-950 italic uppercase">Degree vs Skill Analysis</h2>
+                        <p className="text-gray-700 font-medium">Comparison for {formData.desiredCareer}</p>
                     </div>
                     <button
                         onClick={() => { setAnalysis(null); setCurrentStep(1); }}
@@ -139,7 +139,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                         </h3>
                         <div className="space-y-6">
                             <div className="space-y-2">
-                                <div className="flex justify-between text-xs font-bold uppercase text-gray-400">
+                                <div className="flex justify-between text-xs font-bold uppercase text-gray-600">
                                     <span>Degree Path</span>
                                     <span>{analysis.comparisonMetrics.timeToROI.degree}</span>
                                 </div>
@@ -148,7 +148,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                <div className="flex justify-between text-xs font-bold uppercase text-gray-400">
+                                <div className="flex justify-between text-xs font-bold uppercase text-gray-600">
                                     <span>Skill Path</span>
                                     <span>{analysis.comparisonMetrics.timeToROI.skill}</span>
                                 </div>
@@ -235,8 +235,8 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                     </div>
                 </div>
 
-                <div className="text-center py-8 opacity-40">
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em]">This AI Trained and published by THF NEXUS</p>
+                <div className="text-center py-8 opacity-70">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-600">This AI Trained and published by THF NEXUS</p>
                 </div>
             </div>
         )
@@ -247,14 +247,14 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
             <div className="bg-white p-8 rounded-3xl border shadow-sm">
                 <div className="text-center mb-8">
                     <GraduationCap className="w-16 h-16 mx-auto text-blue-600 mb-4" />
-                    <h2 className="text-3xl font-extrabold text-gray-900 tracking-tighter uppercase italic">Degree vs Skill Simulator</h2>
-                    <p className="text-[10px] font-black text-gray-400 mt-2 uppercase tracking-[0.2em]">This AI Trained and published by THF NEXUS</p>
+                    <h2 className="text-3xl font-extrabold text-gray-950 tracking-tighter uppercase italic">Degree vs Skill Simulator</h2>
+                    <p className="text-[10px] font-black text-gray-500 mt-2 uppercase tracking-[0.2em]">This AI Trained and published by THF NEXUS</p>
                 </div>
 
                 {/* Progress Bar */}
                 <div className="mb-10 px-2">
                     <div className="flex justify-between mb-2">
-                        <span className="text-[10px] font-black text-gray-300 uppercase letter tracking-widest">Step {currentStep} of 3</span>
+                        <span className="text-[10px] font-black text-gray-500 uppercase letter tracking-widest">Step {currentStep} of 3</span>
                         <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">ROI Analysis {Math.round((currentStep / 3) * 100)}%</span>
                     </div>
                     <div className="w-full bg-gray-100 rounded-full h-1 overflow-hidden">
@@ -281,7 +281,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
-                                <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Age / Current Grade *</label>
+                                <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Age / Current Grade *</label>
                                 <input
                                     type="text" value={formData.ageGrade}
                                     onChange={(e) => handleChange('ageGrade', e.target.value)}
@@ -289,7 +289,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                                 />
                             </div>
                             <div>
-                                <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Country *</label>
+                                <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Country *</label>
                                 <input
                                     type="text" value={formData.country}
                                     onChange={(e) => handleChange('country', e.target.value)}
@@ -298,7 +298,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                             </div>
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Current Education *</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Current Education *</label>
                             <input
                                 type="text" value={formData.education}
                                 onChange={(e) => handleChange('education', e.target.value)}
@@ -316,7 +316,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                             Future Goal
                         </h3>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Desired Career *</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Desired Career *</label>
                             <input
                                 type="text" value={formData.desiredCareer}
                                 onChange={(e) => handleChange('desiredCareer', e.target.value)}
@@ -324,7 +324,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                             />
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Financial Situation / Urgency *</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Financial Situation / Urgency *</label>
                             <select
                                 value={formData.financialUrgency} onChange={(e) => handleChange('financialUrgency', e.target.value)}
                                 className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
@@ -346,7 +346,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                             Skills & Context
                         </h3>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Current Skills (Optional)</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Current Skills (Optional)</label>
                             <textarea
                                 value={formData.currentSkills}
                                 onChange={(e) => handleChange('currentSkills', e.target.value)}
@@ -355,7 +355,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                             />
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Additional Notes (Optional)</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Additional Notes (Optional)</label>
                             <textarea
                                 value={formData.additionalNotes}
                                 onChange={(e) => handleChange('additionalNotes', e.target.value)}
@@ -371,7 +371,7 @@ export default function DegreeVsSkillClient({ userCredits }: { userCredits: numb
                     <button
                         onClick={prevStep}
                         disabled={currentStep === 1 || loading}
-                        className="flex items-center gap-2 px-6 py-3 text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-gray-900 disabled:opacity-20 transition-all font-bold"
+                        className="flex items-center gap-2 px-6 py-3 text-xs font-bold text-gray-600 uppercase tracking-widest hover:text-gray-900 disabled:opacity-20 transition-all font-bold"
                     >
                         <ChevronLeft className="w-4 h-4" />
                         Prev

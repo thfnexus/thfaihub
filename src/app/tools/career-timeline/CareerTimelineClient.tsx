@@ -103,8 +103,8 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
             <div className="max-w-2xl mx-auto text-center py-12">
                 <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8">
                     <TrendingUp className="w-16 h-16 mx-auto text-yellow-600 mb-4" />
-                    <h2 className="text-2xl font-bold mb-2 text-gray-900">Credits Exhausted</h2>
-                    <p className="text-gray-600 mb-6">You need at least 1 credit to perform a strategic roadmap simulation.</p>
+                    <h2 className="text-2xl font-bold mb-2 text-gray-950">Credits Exhausted</h2>
+                    <p className="text-gray-800 mb-6">You need at least 1 credit to perform a strategic roadmap simulation.</p>
                     <a href="/pricing" className="inline-block bg-black text-white px-8 py-3 rounded-xl font-medium hover:bg-gray-800 transition-all">
                         Upgrade Plan
                     </a>
@@ -121,8 +121,8 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                         <div className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest w-fit mb-2">
                             {roadmap.careerArchetype}
                         </div>
-                        <h2 className="text-3xl font-bold text-gray-900 italic uppercase">Strategic Growth Roadmap</h2>
-                        <p className="text-gray-500 font-medium">5-Year Action Plan (2026-2030)</p>
+                        <h2 className="text-3xl font-bold text-gray-950 italic uppercase">Strategic Growth Roadmap</h2>
+                        <p className="text-gray-700 font-medium">5-Year Action Plan (2026-2030)</p>
                     </div>
                     <button
                         onClick={() => { setRoadmap(null); setCurrentStep(1); }}
@@ -140,7 +140,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="space-y-2">
-                            <div className="flex justify-between text-xs font-bold uppercase text-gray-400">
+                            <div className="flex justify-between text-xs font-bold uppercase text-gray-600">
                                 <span>Current Skills Gap</span>
                                 <span>{roadmap.progressEstimates.skills}%</span>
                             </div>
@@ -149,7 +149,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <div className="flex justify-between text-xs font-bold uppercase text-gray-400">
+                            <div className="flex justify-between text-xs font-bold uppercase text-gray-600">
                                 <span>Education Alignment</span>
                                 <span>{roadmap.progressEstimates.education}%</span>
                             </div>
@@ -158,7 +158,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <div className="flex justify-between text-xs font-bold uppercase text-gray-400">
+                            <div className="flex justify-between text-xs font-bold uppercase text-gray-600">
                                 <span>Market Readiness</span>
                                 <span>{roadmap.progressEstimates.readiness}%</span>
                             </div>
@@ -191,8 +191,8 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                                     <div className="flex justify-between items-start mb-2">
                                         <span className="text-xs font-black text-orange-500 uppercase tracking-widest">{step.period}</span>
                                         <span className={`text-[10px] px-2 py-1 rounded bg-white border font-bold uppercase ${step.type === 'job' ? 'text-green-600' :
-                                                step.type === 'skill' ? 'text-blue-600' :
-                                                    step.type === 'project' ? 'text-purple-600' : 'text-gray-500'
+                                            step.type === 'skill' ? 'text-blue-600' :
+                                                step.type === 'project' ? 'text-purple-600' : 'text-gray-700'
                                             }`}>
                                             {step.type}
                                         </span>
@@ -214,7 +214,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                         {roadmap.milestones.map((m, i) => (
                             <div key={i} className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
                                 <div className={`text-[10px] font-black uppercase mb-1 ${m.type === 'short' ? 'text-blue-400' :
-                                        m.type === 'medium' ? 'text-purple-400' : 'text-green-400'
+                                    m.type === 'medium' ? 'text-purple-400' : 'text-green-400'
                                     }`}>
                                     {m.type}-term ({m.period})
                                 </div>
@@ -263,8 +263,8 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                     </div>
                 </div>
 
-                <div className="text-center pt-10 border-t">
-                    <p className="text-[10px] font-black tracking-[0.3em] uppercase opacity-40">This AI Trained and published by THF NEXUS — Strategic Engine 2.0</p>
+                <div className="text-center pt-10 border-t opacity-70">
+                    <p className="text-[10px] font-black tracking-[0.3em] uppercase text-gray-600">This AI Trained and published by THF NEXUS — Strategic Engine 2.0</p>
                 </div>
             </div>
         )
@@ -275,14 +275,14 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
             <div className="bg-white p-8 rounded-3xl border shadow-sm">
                 <div className="text-center mb-8">
                     <TrendingUp className="w-16 h-16 mx-auto text-orange-500 mb-4" />
-                    <h2 className="text-3xl font-extrabold text-gray-900 tracking-tighter uppercase italic">Strategic Roadmap Architecture</h2>
-                    <p className="text-[10px] font-black text-gray-400 mt-2 uppercase tracking-[0.2em]">This AI Trained and published by THF NEXUS</p>
+                    <h2 className="text-3xl font-extrabold text-gray-950 tracking-tighter uppercase italic">Strategic Roadmap Architecture</h2>
+                    <p className="text-[10px] font-black text-gray-500 mt-2 uppercase tracking-[0.2em]">This AI Trained and published by THF NEXUS</p>
                 </div>
 
                 {/* Progress Bar */}
                 <div className="mb-10 px-2">
                     <div className="flex justify-between mb-2">
-                        <span className="text-[10px] font-black text-gray-300 uppercase letter tracking-widest">Phase {currentStep} / 3</span>
+                        <span className="text-[10px] font-black text-gray-500 uppercase letter tracking-widest">Phase {currentStep} / 3</span>
                         <span className="text-[10px] font-black text-orange-600 uppercase tracking-widest">Architecture Engine {Math.round((currentStep / 3) * 100)}%</span>
                     </div>
                     <div className="w-full bg-gray-100 rounded-full h-1 overflow-hidden">
@@ -309,7 +309,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
-                                <label className="block text-[10px] font-black text-gray-400 uppercase mb-2 tracking-widest">Age *</label>
+                                <label className="block text-[10px] font-black text-gray-600 uppercase mb-2 tracking-widest">Age *</label>
                                 <input
                                     type="text" value={formData.age}
                                     onChange={(e) => handleChange('age', e.target.value)}
@@ -317,7 +317,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                                 />
                             </div>
                             <div>
-                                <label className="block text-[10px] font-black text-gray-400 uppercase mb-2 tracking-widest">Country *</label>
+                                <label className="block text-[10px] font-black text-gray-600 uppercase mb-2 tracking-widest">Country *</label>
                                 <input
                                     type="text" value={formData.country}
                                     onChange={(e) => handleChange('country', e.target.value)}
@@ -326,7 +326,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                             </div>
                         </div>
                         <div>
-                            <label className="block text-[10px] font-black text-gray-400 uppercase mb-2 tracking-widest">Current Education & Skills *</label>
+                            <label className="block text-[10px] font-black text-gray-600 uppercase mb-2 tracking-widest">Current Education & Skills *</label>
                             <textarea
                                 value={formData.currentEducationSkills}
                                 onChange={(e) => handleChange('currentEducationSkills', e.target.value)}
@@ -345,7 +345,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                             <h3 className="font-bold text-orange-900 text-sm uppercase tracking-tight">Goal & Logistics</h3>
                         </div>
                         <div>
-                            <label className="block text-[10px] font-black text-gray-400 uppercase mb-2 tracking-widest">Future Goal / Aspirations *</label>
+                            <label className="block text-[10px] font-black text-gray-600 uppercase mb-2 tracking-widest">Future Goal / Aspirations *</label>
                             <input
                                 type="text" value={formData.futureGoal}
                                 onChange={(e) => handleChange('futureGoal', e.target.value)}
@@ -354,7 +354,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
-                                <label className="block text-[10px] font-black text-gray-400 uppercase mb-2 tracking-widest">Daily Time Commitment *</label>
+                                <label className="block text-[10px] font-black text-gray-600 uppercase mb-2 tracking-widest">Daily Time Commitment *</label>
                                 <select
                                     value={formData.dailyTimeCommitment} onChange={(e) => handleChange('dailyTimeCommitment', e.target.value)}
                                     className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-medium appearance-none"
@@ -366,7 +366,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                                 </select>
                             </div>
                             <div>
-                                <label className="block text-[10px] font-black text-gray-400 uppercase mb-2 tracking-widest">Preferred Learning Style *</label>
+                                <label className="block text-[10px] font-black text-gray-600 uppercase mb-2 tracking-widest">Preferred Learning Style *</label>
                                 <select
                                     value={formData.learningStyle} onChange={(e) => handleChange('learningStyle', e.target.value)}
                                     className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-orange-500 outline-none transition-all font-medium appearance-none"
@@ -390,7 +390,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                             <h3 className="font-bold text-orange-900 text-sm uppercase tracking-tight">Deployment Context</h3>
                         </div>
                         <div>
-                            <label className="block text-[10px] font-black text-gray-400 uppercase mb-2 tracking-widest">Constraints & Preferences (Optional)</label>
+                            <label className="block text-[10px] font-black text-gray-600 uppercase mb-2 tracking-widest">Constraints & Preferences (Optional)</label>
                             <textarea
                                 value={formData.additionalNotes}
                                 onChange={(e) => handleChange('additionalNotes', e.target.value)}
@@ -417,7 +417,7 @@ export default function CareerTimelineClient({ userCredits }: { userCredits: num
                     <button
                         onClick={prevStep}
                         disabled={currentStep === 1 || loading}
-                        className="flex items-center gap-2 px-6 py-3 text-[10px] font-black text-gray-400 uppercase tracking-widest hover:text-gray-900 disabled:opacity-20 transition-all font-bold"
+                        className="flex items-center gap-2 px-6 py-3 text-[10px] font-black text-gray-600 uppercase tracking-widest hover:text-gray-900 disabled:opacity-20 transition-all font-bold"
                     >
                         <ChevronLeft className="w-4 h-4" />
                         Prev

@@ -70,14 +70,14 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                 <h1 className="text-4xl md:text-5xl font-black text-slate-900 uppercase italic tracking-tighter">
                     AI Interview <span className="text-red-600">Coach</span>
                 </h1>
-                <p className="text-slate-500 text-sm md:text-lg font-medium max-w-2xl mx-auto leading-tight">
+                <p className="text-slate-700 text-sm md:text-lg font-medium max-w-2xl mx-auto leading-tight">
                     Prepare for 2026 market standards. Decisive, market-backed guidance from senior hiring consultants.
                 </p>
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
+                <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">
                     This AI Trained and published by THF NEXUS
                 </p>
                 <div className="flex justify-center">
-                    <div className="bg-slate-100 px-4 py-2 rounded-full text-sm font-bold text-slate-600 border border-slate-200">
+                    <div className="bg-slate-100 px-4 py-2 rounded-full text-sm font-bold text-slate-700 border border-slate-200">
                         Available Credits: <span className="text-red-600">{userCredits}</span>
                     </div>
                 </div>
@@ -184,7 +184,7 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                             </div>
                             <div className="p-8 grid md:grid-cols-2 gap-8">
                                 <div className="space-y-4">
-                                    <h3 className="text-sm font-black text-slate-400 uppercase tracking-widest">Core Responsibilities</h3>
+                                    <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest">Core Responsibilities</h3>
                                     <ul className="space-y-2">
                                         {result.roleAnalysis.responsibilities.map((item, i) => (
                                             <li key={i} className="flex items-start gap-3 text-slate-600 font-medium text-sm">
@@ -196,7 +196,7 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                 </div>
                                 <div className="space-y-6">
                                     <div className="space-y-4">
-                                        <h3 className="text-sm font-black text-slate-400 uppercase tracking-widest">Demanded Skills</h3>
+                                        <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest">Demanded Skills</h3>
                                         <div className="flex flex-wrap gap-2">
                                             {result.roleAnalysis.demandedSkills.technical.map((skill, i) => (
                                                 <span key={i} className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-xs font-bold uppercase">
@@ -211,7 +211,7 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                         </div>
                                     </div>
                                     <div className="space-y-4">
-                                        <h3 className="text-sm font-black text-slate-400 uppercase tracking-widest">Industry Trends (2026)</h3>
+                                        <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest">Industry Trends (2026)</h3>
                                         <div className="flex flex-wrap gap-2">
                                             {result.roleAnalysis.industryTrends.map((trend, i) => (
                                                 <span key={i} className="px-3 py-1.5 bg-amber-50 text-amber-700 rounded-lg text-xs font-bold uppercase">
@@ -240,11 +240,11 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                             <div className="space-y-2">
                                                 <div className="flex gap-2">
                                                     <Info className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
-                                                    <p className="text-xs text-slate-500 font-medium"><span className="text-slate-900 font-bold uppercase">Why:</span> {topic.importance}</p>
+                                                    <p className="text-xs text-slate-600 font-medium"><span className="text-slate-900 font-bold uppercase">Why:</span> {topic.importance}</p>
                                                 </div>
                                                 <div className="flex gap-2">
                                                     <Target className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
-                                                    <p className="text-xs text-slate-500 font-medium"><span className="text-slate-900 font-bold uppercase">Depth:</span> {topic.depthExpected}</p>
+                                                    <p className="text-xs text-slate-600 font-medium"><span className="text-slate-900 font-bold uppercase">Depth:</span> {topic.depthExpected}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -271,8 +271,8 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                             <div className="grid md:grid-cols-2 gap-8">
                                                 <div className="space-y-4">
                                                     <div className="space-y-2">
-                                                        <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                                                            <Target className="w-3.5 h-3.5 text-blue-500" /> What's being tested?
+                                                        <h4 className="text-xs font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
+                                                            <Target className="w-3.5 h-3.5 text-blue-500" /> <span className="text-slate-700">What's being tested?</span>
                                                         </h4>
                                                         <p className="text-sm text-slate-600 font-medium leading-relaxed">{q.whatIsTested}</p>
                                                     </div>
@@ -291,8 +291,8 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                                     </div>
                                                 </div>
                                                 <div className="p-6 bg-slate-900 rounded-3xl space-y-4">
-                                                    <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> Senior Consultant Response
+                                                    <h4 className="text-xs font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
+                                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> <span className="text-slate-300">Senior Consultant Response</span>
                                                     </h4>
                                                     <p className="text-sm text-slate-300 font-medium leading-relaxed italic">{q.sampleAnswer}</p>
                                                 </div>
@@ -348,7 +348,7 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                         {result.preparationGuidance.checklist.map((item, i) => (
                                             <div key={i} className="flex items-center gap-3">
                                                 <div className="w-5 h-5 rounded border-2 border-slate-200 flex-shrink-0" />
-                                                <span className="text-sm text-slate-600 font-medium">{item}</span>
+                                                <span className="text-sm text-slate-700 font-medium">{item}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -384,7 +384,7 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                     </div>
                                     <div className="space-y-6">
                                         <div className="p-6 bg-red-600 rounded-3xl space-y-3 shadow-2xl shadow-red-500/20">
-                                            <h3 className="text-xs font-black text-white/60 uppercase tracking-widest">Confidence vs Knowledge</h3>
+                                            <h3 className="text-xs font-black text-white/80 uppercase tracking-widest">Confidence vs Knowledge</h3>
                                             <p className="text-sm text-white font-bold leading-relaxed">{result.selfPractice.confidenceVsKnowledge}</p>
                                         </div>
                                     </div>
@@ -403,14 +403,14 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                             <div className="p-8 grid md:grid-cols-12 gap-8">
                                 <div className="md:col-span-4 space-y-6">
                                     <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
-                                        <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest">Competition Level</h3>
+                                        <h3 className="text-xs font-black text-slate-500 uppercase tracking-widest">Competition Level</h3>
                                         <p className="text-lg font-black text-slate-900 uppercase italic tracking-tighter">{result.realityCheck.competitionLevel}</p>
                                     </div>
                                     <div className="space-y-3">
-                                        <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest">What Most Candidates Lack</h3>
+                                        <h3 className="text-xs font-black text-slate-500 uppercase tracking-widest">What Most Candidates Lack</h3>
                                         <ul className="space-y-2">
                                             {result.realityCheck.whatCandidatesLack.map((item, i) => (
-                                                <li key={i} className="flex items-center gap-2 text-sm text-slate-600 font-bold">
+                                                <li key={i} className="flex items-center gap-2 text-sm text-slate-700 font-bold">
                                                     <AlertCircle className="w-4 h-4 text-red-500" /> {item}
                                                 </li>
                                             ))}
@@ -419,8 +419,8 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                                 </div>
                                 <div className="md:col-span-8 space-y-6">
                                     <div className="space-y-3">
-                                        <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest">2026 Market Expectations</h3>
-                                        <p className="text-sm text-slate-600 font-medium leading-relaxed">{result.realityCheck.marketExpectations2026}</p>
+                                        <h3 className="text-xs font-black text-slate-500 uppercase tracking-widest">2026 Market Expectations</h3>
+                                        <p className="text-sm text-slate-700 font-medium leading-relaxed">{result.realityCheck.marketExpectations2026}</p>
                                     </div>
                                     <div className="p-8 bg-slate-900 rounded-3xl space-y-4">
                                         <h3 className="text-sm font-black text-red-500 uppercase tracking-widest">How to Stand Out</h3>
@@ -430,8 +430,9 @@ export default function InterviewCoachClient({ userCredits }: InterviewCoachClie
                             </div>
                         </div>
                     </div>
-                )}
-            </div>
-        </div>
+                )
+                }
+            </div >
+        </div >
     )
 }

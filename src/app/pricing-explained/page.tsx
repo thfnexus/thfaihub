@@ -13,7 +13,7 @@ export default function PricingExplainedPage() {
                     <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-slate-900 uppercase italic tracking-tighter leading-none">
                         Pricing <span className="text-blue-600">Framework.</span>
                     </h1>
-                    <p className="text-slate-500 font-bold uppercase tracking-normal md:tracking-[0.25em] text-xs max-w-xl mx-auto leading-relaxed">
+                    <p className="text-slate-700 font-bold uppercase tracking-normal md:tracking-[0.25em] text-xs max-w-xl mx-auto leading-relaxed">
                         Everything you need to know about credits, plans, and choosing the right path for your career.
                     </p>
                 </div>
@@ -28,7 +28,7 @@ export default function PricingExplainedPage() {
                                     <h2 className="text-3xl font-black text-slate-900 uppercase italic tracking-tight flex items-center gap-3">
                                         <Coins className="w-8 h-8 text-blue-600" /> What is 1 Credit?
                                     </h2>
-                                    <p className="text-slate-600 font-medium leading-relaxed">
+                                    <p className="text-slate-700 font-medium leading-relaxed">
                                         Think of **Credits** as the fuel for our AI engine. Every time you ask a question or request an analysis, our neural nodes process massive amounts of data. Credits cover this computational power.
                                     </p>
                                 </div>
@@ -39,15 +39,15 @@ export default function PricingExplainedPage() {
                                     </h4>
                                     <div className="space-y-4">
                                         <div className="flex justify-between items-center py-2 border-b border-slate-200">
-                                            <span className="text-sm font-bold text-slate-600">Standard Career Query</span>
+                                            <span className="text-sm font-bold text-slate-700">Standard Career Query</span>
                                             <span className="bg-blue-600 text-white text-[10px] font-black px-2 py-1 rounded-md">1 CREDIT</span>
                                         </div>
                                         <div className="flex justify-between items-center py-2 border-b border-slate-200">
-                                            <span className="text-sm font-bold text-slate-600">Full Profile Analysis</span>
+                                            <span className="text-sm font-bold text-slate-700">Full Profile Analysis</span>
                                             <span className="bg-blue-600 text-white text-[10px] font-black px-2 py-1 rounded-md">2 CREDITS</span>
                                         </div>
                                         <div className="flex justify-between items-center py-2">
-                                            <span className="text-sm font-bold text-slate-600">Deep Scholarship Sync</span>
+                                            <span className="text-sm font-bold text-slate-700">Deep Scholarship Sync</span>
                                             <span className="bg-slate-900 text-white text-[10px] font-black px-2 py-1 rounded-md">5 CREDITS</span>
                                         </div>
                                     </div>
@@ -83,13 +83,13 @@ export default function PricingExplainedPage() {
                             <table className="w-full text-left">
                                 <thead>
                                     <tr className="border-b border-slate-100">
-                                        <th className="px-4 md:px-8 py-6 text-[10px] font-black uppercase tracking-widest text-slate-400">Feature</th>
-                                        <th className="px-4 md:px-8 py-6 text-[10px] font-black uppercase tracking-widest text-slate-400">FREE</th>
+                                        <th className="px-4 md:px-8 py-6 text-[10px] font-black uppercase tracking-widest text-slate-600">Feature</th>
+                                        <th className="px-4 md:px-8 py-6 text-[10px] font-black uppercase tracking-widest text-slate-600">FREE</th>
                                         <th className="px-4 md:px-8 py-6 text-[10px] font-black uppercase tracking-widest text-blue-600">PRO</th>
                                         <th className="px-4 md:px-8 py-6 text-[10px] font-black uppercase tracking-widest text-slate-900">PREMIUM</th>
                                     </tr>
                                 </thead>
-                                <tbody className="text-slate-600 font-medium">
+                                <tbody className="text-slate-700 font-medium">
                                     <tr className="border-b border-slate-50">
                                         <td className="px-4 md:px-8 py-4 text-sm font-bold">Monthly Credits</td>
                                         <td className="px-4 md:px-8 py-4 text-xs font-black italic">10 (Once)</td>
@@ -104,7 +104,7 @@ export default function PricingExplainedPage() {
                                     </tr>
                                     <tr className="border-b border-slate-50">
                                         <td className="px-4 md:px-8 py-4 text-sm font-bold">Analysis Precision</td>
-                                        <td className="px-4 md:px-8 py-4 text-[10px] font-black uppercase text-slate-400">Standard</td>
+                                        <td className="px-4 md:px-8 py-4 text-[10px] font-black uppercase text-slate-600">Standard</td>
                                         <td className="px-4 md:px-8 py-4 text-[10px] font-black uppercase text-blue-600">Advanced</td>
                                         <td className="px-4 md:px-8 py-4 text-[10px] font-black uppercase text-slate-900">Maximum</td>
                                     </tr>
@@ -129,15 +129,15 @@ export default function PricingExplainedPage() {
                             <div className="space-y-4">
                                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
                                     <h4 className="text-[10px] font-black uppercase text-slate-900 tracking-widest mb-1">Choosing a major</h4>
-                                    <p className="text-xs text-slate-500 font-medium">Use **FREE** to explore basics. 10 credits is plenty for 5-6 broad queries.</p>
+                                    <p className="text-xs text-slate-700 font-medium">Use **FREE** to explore basics. 10 credits is plenty for 5-6 broad queries.</p>
                                 </div>
                                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
                                     <h4 className="text-[10px] font-black uppercase text-slate-900 tracking-widest mb-1">Applying for Uni</h4>
-                                    <p className="text-xs text-slate-500 font-medium">Go **PRO**. 80 credits allows deeper university analysis and scholarship hunting.</p>
+                                    <p className="text-xs text-slate-700 font-medium">Go **PRO**. 80 credits allows deeper university analysis and scholarship hunting.</p>
                                 </div>
                                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100">
                                     <h4 className="text-[10px] font-black uppercase text-slate-900 tracking-widest mb-1">Scaling Career</h4>
-                                    <p className="text-xs text-slate-500 font-medium">Go **PREMIUM**. 250 credits for frequent neural syncs as you build your career.</p>
+                                    <p className="text-xs text-slate-700 font-medium">Go **PREMIUM**. 250 credits for frequent neural syncs as you build your career.</p>
                                 </div>
                             </div>
                         </div>

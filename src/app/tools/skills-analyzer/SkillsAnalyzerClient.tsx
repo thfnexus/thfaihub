@@ -106,8 +106,8 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
             <div className="max-w-2xl mx-auto text-center py-12">
                 <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8">
                     <Brain className="w-16 h-16 mx-auto text-yellow-600 mb-4" />
-                    <h2 className="text-2xl font-bold mb-2 text-gray-900">Credits Exhausted</h2>
-                    <p className="text-gray-600 mb-6">You need at least 1 credit to perform a deep skills analysis.</p>
+                    <h2 className="text-2xl font-bold mb-2 text-gray-950">Credits Exhausted</h2>
+                    <p className="text-gray-800 mb-6">You need at least 1 credit to perform a deep skills analysis.</p>
                     <a href="/pricing" className="inline-block bg-black text-white px-8 py-3 rounded-xl font-medium hover:bg-gray-800 transition-all">
                         Upgrade Plan
                     </a>
@@ -121,8 +121,8 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
             <div className="max-w-5xl mx-auto space-y-8 pb-20">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 bg-white p-6 rounded-2xl border shadow-sm">
                     <div>
-                        <h2 className="text-3xl font-bold text-gray-900">Skill Analysis Results</h2>
-                        <p className="text-gray-500 font-medium">Personalized for {formData.fullName || 'you'}</p>
+                        <h2 className="text-3xl font-bold text-gray-950">Skill Analysis Results</h2>
+                        <p className="text-gray-700 font-medium">Personalized for {formData.fullName || 'you'}</p>
                     </div>
                     <button
                         onClick={() => { setAnalysis(null); setCurrentStep(1); }}
@@ -141,13 +141,13 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold">Overall Mastery</h3>
-                                <p className="text-sm text-gray-500">Current status in your field</p>
+                                <p className="text-sm text-gray-700">Current status in your field</p>
                             </div>
                         </div>
                         <div className="text-center py-8">
                             <div className="inline-block relative">
                                 <div className="text-5xl font-black text-blue-600 mb-2">{analysis.masteryLevel}%</div>
-                                <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">Level Scored</div>
+                                <div className="text-xs font-bold text-gray-600 uppercase tracking-widest">Level Scored</div>
                             </div>
                         </div>
                     </div>
@@ -178,15 +178,15 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                             <div className="text-xs font-black text-blue-600 uppercase mb-2">Months 1-3</div>
-                            <p className="text-sm leading-relaxed text-gray-700 font-medium">{analysis.roadmap12Months.m1_3}</p>
+                            <p className="text-sm leading-relaxed text-gray-900 font-medium">{analysis.roadmap12Months.m1_3}</p>
                         </div>
                         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                             <div className="text-xs font-black text-purple-600 uppercase mb-2">Months 4-6</div>
-                            <p className="text-sm leading-relaxed text-gray-700 font-medium">{analysis.roadmap12Months.m4_6}</p>
+                            <p className="text-sm leading-relaxed text-gray-900 font-medium">{analysis.roadmap12Months.m4_6}</p>
                         </div>
                         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                             <div className="text-xs font-black text-green-600 uppercase mb-2">Months 7-12</div>
-                            <p className="text-sm leading-relaxed text-gray-700 font-medium">{analysis.roadmap12Months.m7_12}</p>
+                            <p className="text-sm leading-relaxed text-gray-900 font-medium">{analysis.roadmap12Months.m7_12}</p>
                         </div>
                     </div>
                 </div>
@@ -204,7 +204,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                                     <div className="font-bold text-blue-900 border-b border-blue-100 pb-1 mb-2">{course.name}</div>
                                     <div className="flex justify-between items-center">
                                         <span className="text-xs font-bold text-blue-600 uppercase">{course.platform}</span>
-                                        <span className="text-xs font-black bg-white px-2 py-1 rounded shadow-sm text-gray-500">{course.duration}</span>
+                                        <span className="text-xs font-black bg-white px-2 py-1 rounded shadow-sm text-gray-700">{course.duration}</span>
                                     </div>
                                 </div>
                             ))}
@@ -218,9 +218,9 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                         </h3>
                         <div className="p-6 bg-white/10 rounded-2xl border border-white/20">
                             <div className="text-2xl font-black mb-2 italic">"{analysis.worthCertifications}"</div>
-                            <p className="text-sm text-white/70 italic leading-relaxed">Highly recommended for your 2026 growth trajectory.</p>
+                            <p className="text-sm text-white italic leading-relaxed">Highly recommended for your 2026 growth trajectory.</p>
                         </div>
-                        <div className="mt-8 pt-8 border-t border-white/10 text-center opacity-40">
+                        <div className="mt-8 pt-8 border-t border-white/10 text-center opacity-70">
                             <p className="text-[10px] font-black uppercase tracking-[0.2em]">This AI Trained and published by THF NEXUS</p>
                         </div>
                     </div>
@@ -234,14 +234,14 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
             <div className="bg-white p-8 rounded-3xl border shadow-sm">
                 <div className="text-center mb-8">
                     <Brain className="w-16 h-16 mx-auto text-blue-600 mb-4" />
-                    <h2 className="text-3xl font-extrabold text-gray-900 tracking-tighter uppercase italic">AI Skills Analyzer</h2>
-                    <p className="text-[10px] font-black text-gray-400 mt-2 uppercase tracking-[0.2em]">This AI Trained and published by THF NEXUS</p>
+                    <h2 className="text-3xl font-extrabold text-gray-950 tracking-tighter uppercase italic">AI Skills Analyzer</h2>
+                    <p className="text-[10px] font-black text-gray-500 mt-2 uppercase tracking-[0.2em]">This AI Trained and published by THF NEXUS</p>
                 </div>
 
                 {/* Progress Bar */}
                 <div className="mb-10 px-2">
                     <div className="flex justify-between mb-2">
-                        <span className="text-[10px] font-black text-gray-300 uppercase letter tracking-widest">Step {currentStep} of 4</span>
+                        <span className="text-[10px] font-black text-gray-500 uppercase letter tracking-widest">Step {currentStep} of 4</span>
                         <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">Logic Scan {Math.round((currentStep / 4) * 100)}%</span>
                     </div>
                     <div className="w-full bg-gray-100 rounded-full h-1 overflow-hidden">
@@ -262,12 +262,12 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                 {/* Step 1: Profile */}
                 {currentStep === 1 && (
                     <div className="space-y-6">
-                        <h3 className="font-bold text-gray-900 border-b pb-2 flex items-center gap-2">
+                        <h3 className="font-bold text-gray-950 border-b pb-2 flex items-center gap-2">
                             <span className="bg-blue-600 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px]">1</span>
                             Profile Basics
                         </h3>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Full Name (Optional)</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Full Name (Optional)</label>
                             <input
                                 type="text" value={formData.fullName}
                                 onChange={(e) => handleChange('fullName', e.target.value)}
@@ -276,7 +276,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
-                                <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Age *</label>
+                                <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Age *</label>
                                 <input
                                     type="text" value={formData.age}
                                     onChange={(e) => handleChange('age', e.target.value)}
@@ -284,7 +284,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                                 />
                             </div>
                             <div>
-                                <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Country *</label>
+                                <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Country *</label>
                                 <input
                                     type="text" value={formData.country}
                                     onChange={(e) => handleChange('country', e.target.value)}
@@ -293,7 +293,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                             </div>
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Education *</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Education *</label>
                             <input
                                 type="text" value={formData.education}
                                 onChange={(e) => handleChange('education', e.target.value)}
@@ -301,7 +301,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                             />
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Current Field / Job *</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Current Field / Job *</label>
                             <input
                                 type="text" value={formData.currentField}
                                 onChange={(e) => handleChange('currentField', e.target.value)}
@@ -314,12 +314,12 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                 {/* Step 2: Skills */}
                 {currentStep === 2 && (
                     <div className="space-y-6">
-                        <h3 className="font-bold text-gray-900 border-b pb-2 flex items-center gap-2">
+                        <h3 className="font-bold text-gray-950 border-b pb-2 flex items-center gap-2">
                             <span className="bg-blue-600 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px]">2</span>
                             Current Skills & XP
                         </h3>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Your Current Skills *</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Your Current Skills *</label>
                             <textarea
                                 value={formData.currentSkills}
                                 onChange={(e) => handleChange('currentSkills', e.target.value)}
@@ -328,7 +328,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                             />
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Experience Range *</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Experience Range *</label>
                             <select
                                 value={formData.experience} onChange={(e) => handleChange('experience', e.target.value)}
                                 className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
@@ -346,12 +346,12 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                 {/* Step 3: Ambition */}
                 {currentStep === 3 && (
                     <div className="space-y-6">
-                        <h3 className="font-bold text-gray-900 border-b pb-2 flex items-center gap-2">
+                        <h3 className="font-bold text-gray-950 border-b pb-2 flex items-center gap-2">
                             <span className="bg-blue-600 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px]">3</span>
                             Future Ambition
                         </h3>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Future Career Goal *</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Future Career Goal *</label>
                             <input
                                 type="text" value={formData.futureGoal}
                                 onChange={(e) => handleChange('futureGoal', e.target.value)}
@@ -359,7 +359,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                             />
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Financial Situation / Urgency *</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Financial Situation / Urgency *</label>
                             <select
                                 value={formData.financialUrgency} onChange={(e) => handleChange('financialUrgency', e.target.value)}
                                 className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
@@ -376,12 +376,12 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                 {/* Step 4: Method */}
                 {currentStep === 4 && (
                     <div className="space-y-6">
-                        <h3 className="font-bold text-gray-900 border-b pb-2 flex items-center gap-2">
+                        <h3 className="font-bold text-gray-950 border-b pb-2 flex items-center gap-2">
                             <span className="bg-blue-600 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px]">4</span>
                             Learning Method
                         </h3>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Learning Preference *</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Learning Preference *</label>
                             <select
                                 value={formData.learningPreference} onChange={(e) => handleChange('learningPreference', e.target.value)}
                                 className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:bg-white focus:border-blue-500 outline-none transition-all font-medium"
@@ -395,7 +395,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                             </select>
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-widest">Constraints / Notes (Optional)</label>
+                            <label className="block text-xs font-bold text-gray-600 uppercase mb-2 tracking-widest">Constraints / Notes (Optional)</label>
                             <textarea
                                 value={formData.additionalNotes}
                                 onChange={(e) => handleChange('additionalNotes', e.target.value)}
@@ -411,7 +411,7 @@ export default function SkillsAnalyzerClient({ userCredits }: { userCredits: num
                     <button
                         onClick={prevStep}
                         disabled={currentStep === 1 || loading}
-                        className="flex items-center gap-2 px-6 py-3 text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-gray-900 disabled:opacity-20 transition-all font-bold"
+                        className="flex items-center gap-2 px-6 py-3 text-xs font-bold text-gray-600 uppercase tracking-widest hover:text-gray-900 disabled:opacity-20 transition-all font-bold"
                     >
                         <ChevronLeft className="w-4 h-4" />
                         Prev
