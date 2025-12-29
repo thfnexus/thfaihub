@@ -19,6 +19,19 @@ export default function PrivacyPolicyPage() {
 
                 <div className="bg-white/80 backdrop-blur-2xl border border-white p-8 md:p-16 rounded-[50px] shadow-2xl relative overflow-hidden">
                     <div className="space-y-16 relative z-10">
+                        {/* Legal Business Entity */}
+                        <section className="space-y-6">
+                            <div className="flex items-center gap-4 text-slate-900">
+                                <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-600/20">
+                                    <FileText className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-2xl font-black uppercase italic tracking-tight">Legal Business Entity</h3>
+                            </div>
+                            <p className="text-slate-600 font-medium leading-relaxed">
+                                This Privacy Policy outlines how **THF AI HUB** ("the company", "we", "us", or "our") collects, uses, and protects your information. **THF AI HUB** is the legal entity responsible for your data.
+                            </p>
+                        </section>
+
                         {/* Data Storage */}
                         <section className="space-y-6">
                             <div className="flex items-center gap-4 text-slate-900">
