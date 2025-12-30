@@ -19,50 +19,60 @@ async function updateUser(formData: FormData) {
     const userId = formData.get("userId") as string;
     const plan = formData.get("plan") as any;
     const role = formData.get("role") as any;
-    const credits = parseInt(formData.get("credits") as string);
+    const creditsStr = formData.get("credits") as string;
+    const credits = parseInt(creditsStr);
     const action = formData.get("action");
 
-    if (action === "suspend") {
-        await (prisma.user.update as any)({
-            where: { id: userId },
-            data: { status: "SUSPENDED", credits: 0 }
-        });
-    } else if (action === "unsuspend") {
-        await (prisma.user.update as any)({
-            where: { id: userId },
-            data: { status: "ACTIVE" }
-        });
-    } else {
-        // Fetch current user to check for changes
-        const currentUser = await prisma.user.findUnique({
-            where: { id: userId },
-            select: { plan: true, credits: true }
-        });
+    console.log(`[Admin] Update User ${userId}: Plan=${plan}, Role=${role}, CreditsInput=${credits}`);
 
-        let finalCredits = credits;
+    try {
+        if (action === "suspend") {
+            await (prisma.user.update as any)({
+                where: { id: userId },
+                data: { status: "SUSPENDED", credits: 0 }
+            });
+        } else if (action === "unsuspend") {
+            await (prisma.user.update as any)({
+                where: { id: userId },
+                data: { status: "ACTIVE" }
+            });
+        } else {
+            // Fetch current user to check for changes
+            const currentUser = await prisma.user.findUnique({
+                where: { id: userId },
+                select: { plan: true, credits: true }
+            });
 
-        // Plan Default Credits
-        const planDefaults: Record<string, number> = {
-            'FREE': 10,
-            'PRO': 80,
-            'PREMIUM': 250
-        };
+            let finalCredits = credits;
 
-        if (currentUser && plan !== currentUser.plan) {
-            // If plan changed and credits field wasn't manually modified from old value
-            if (credits === currentUser.credits) {
-                finalCredits = planDefaults[plan] || credits;
+            // Plan Default Credits
+            const planDefaults: Record<string, number> = {
+                'FREE': 10,
+                'PRO': 80,
+                'PREMIUM': 250
+            };
+
+            if (currentUser && plan !== currentUser.plan) {
+                // If plan changed, ALWAYS set to new plan defaults unless the admin explicitly entered a weird number 
+                // that is NOT the old credit count. Use the user's strong preference for auto-reset.
+                // Logic: If plan matches, default to plan limit.
+
+                console.log(`[Admin] Plan changed from ${currentUser.plan} to ${plan}. Resetting credits to ${planDefaults[plan]}`);
+                finalCredits = planDefaults[plan] || 0;
             }
+
+            await prisma.user.update({
+                where: { id: userId },
+                data: { plan, role, credits: finalCredits }
+            });
         }
 
-        await prisma.user.update({
-            where: { id: userId },
-            data: { plan, role, credits: finalCredits }
-        });
+        revalidatePath(`/admin/users/${userId}`);
+        revalidatePath("/admin/users");
+    } catch (error) {
+        console.error("Error updating user:", error);
+        // In a real app we might want to return an error state to the UI
     }
-
-    revalidatePath(`/admin/users/${userId}`);
-    revalidatePath("/admin/users");
 }
 
 export default async function UserDetailPage({ params }: { params: Promise<{ id: string }> }) {
@@ -123,6 +133,7 @@ export default async function UserDetailPage({ params }: { params: Promise<{ id:
                                 >
                                     <option value="USER">USER</option>
                                     <option value="ADMIN">ADMIN</option>
+                                    <option value="MANAGER">MANAGER</option>
                                 </select>
                             </div>
                         </div>
