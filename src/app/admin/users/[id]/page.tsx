@@ -4,6 +4,16 @@ import { redirect } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 
+interface User {
+    id: string;
+    email: string;
+    role: string;
+    plan: string;
+    credits: number;
+    createdAt: Date;
+    status: string;
+}
+
 async function updateUser(formData: FormData) {
     "use server"
     const userId = formData.get("userId") as string;
@@ -13,12 +23,12 @@ async function updateUser(formData: FormData) {
     const action = formData.get("action");
 
     if (action === "suspend") {
-        await prisma.user.update({
+        await (prisma.user.update as any)({
             where: { id: userId },
             data: { status: "SUSPENDED" }
         });
     } else if (action === "unsuspend") {
-        await prisma.user.update({
+        await (prisma.user.update as any)({
             where: { id: userId },
             data: { status: "ACTIVE" }
         });
@@ -35,9 +45,9 @@ async function updateUser(formData: FormData) {
 
 export default async function UserDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
-    const user = await prisma.user.findUnique({
+    const user = (await prisma.user.findUnique({
         where: { id },
-    });
+    })) as unknown as User;
 
     if (!user) return <div>User not found</div>;
 

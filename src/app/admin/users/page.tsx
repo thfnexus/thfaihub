@@ -1,11 +1,21 @@
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 
+interface User {
+    id: string;
+    email: string;
+    role: string;
+    plan: string;
+    credits: number;
+    createdAt: Date;
+    status: string;
+}
+
 export default async function UsersPage() {
     const users = (await prisma.user.findMany({
         orderBy: { createdAt: 'desc' },
-        select: { id: true, email: true, role: true, plan: true, credits: true, createdAt: true, status: true }
-    })) as any[];
+        select: { id: true, email: true, role: true, plan: true, credits: true, createdAt: true, status: true } as any
+    })) as unknown as User[];
 
     return (
         <div className="space-y-8">
