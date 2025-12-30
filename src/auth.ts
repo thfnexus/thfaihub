@@ -24,7 +24,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                     return null
                 }
 
-                if (user.status === "SUSPENDED") {
+                if ((user as any).status === "SUSPENDED") {
                     console.log('❌ Account suspended:', email)
                     throw new Error("ACCOUNT_SUSPENDED")
                 }
@@ -64,8 +64,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                     // Fetch fresh data for credits/plan
                     const freshUser = await prisma.user.findUnique({
                         where: { id: token.sub },
-                        select: { role: true, plan: true, credits: true, status: true }
-                    })
+                        select: { role: true, plan: true, credits: true, status: true, emailVerified: true } as any
+                    }) as any
 
                     if (freshUser) {
                         if (freshUser.status === "SUSPENDED") {
@@ -75,6 +75,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                         } else {
                             session.user.role = freshUser.role
                             session.user.plan = freshUser.plan
+                            session.user.emailVerified = freshUser.emailVerified
                         }
                     }
                 } catch (error) {

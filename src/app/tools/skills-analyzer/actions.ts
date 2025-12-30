@@ -52,6 +52,10 @@ export async function generateSkillAnalysis(
             return { success: false, error: "Your account has been suspended. Please contact support." }
         }
 
+        if (!(session.user as any).emailVerified) {
+            return { success: false, error: "Please verify your email to use this tool." }
+        }
+
         const user = await prisma.user.findUnique({
             where: { id: session.user.id },
             select: { credits: true }

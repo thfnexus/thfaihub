@@ -25,6 +25,7 @@ export async function POST(req: Request) {
         }
 
         const hashedPassword = await bcrypt.hash(password, 10)
+        const verificationToken = crypto.randomUUID()
 
         const user = await prisma.user.create({
             data: {
@@ -33,10 +34,18 @@ export async function POST(req: Request) {
                 name,
                 username,
                 credits: 10, // Sign up bonus
-            },
+                verificationToken,
+            } as any,
         })
 
-        return NextResponse.json({ user: { email: user.email, id: user.id } })
+        // Import mail utility here or at top
+        const { sendVerificationEmail } = await import("@/lib/mail")
+        await sendVerificationEmail(email, verificationToken)
+
+        return NextResponse.json({
+            message: "Verification email sent. Please check your inbox.",
+            user: { email: user.email, id: user.id }
+        })
     } catch (error) {
         console.error("Signup Error:", error);
         return NextResponse.json({ error: "Something went wrong" }, { status: 500 })

@@ -98,7 +98,12 @@ export default async function ProfilePage() {
                                             </div>
                                             <div>
                                                 <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest block">Account Status</label>
-                                                <p className="font-bold text-slate-900">Verified Professional</p>
+                                                <div className="flex items-center gap-2">
+                                                    <p className="font-bold text-slate-900">{(user as any).emailVerified ? 'Verified' : 'Unverified'}</p>
+                                                    {!(user as any).emailVerified && (
+                                                        <span className="px-2 py-0.5 bg-red-100 text-red-600 rounded text-[9px] font-black uppercase tracking-tighter">Action Required</span>
+                                                    )}
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="flex items-center gap-3">

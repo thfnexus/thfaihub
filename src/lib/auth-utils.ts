@@ -7,12 +7,17 @@ export async function checkUserStatus() {
 
     const user = await prisma.user.findUnique({
         where: { id: session.user.id },
-        select: { status: true } as any
+        select: { status: true, emailVerified: true } as any
     });
 
-    if (!user || (user as any).status === "SUSPENDED") {
-        return { authenticated: true, suspended: true };
+    if (!user) return { authenticated: false };
+
+    const status = (user as any).status;
+    const isVerified = !!(user as any).emailVerified;
+
+    if (status === "SUSPENDED") {
+        return { authenticated: true, suspended: true, verified: isVerified };
     }
 
-    return { authenticated: true, suspended: false };
+    return { authenticated: true, suspended: false, verified: isVerified };
 }

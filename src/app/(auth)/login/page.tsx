@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { signIn } from "next-auth/react"
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { Mail, Lock, Loader2, ArrowRight, ShieldCheck } from "lucide-react"
 
@@ -12,6 +12,8 @@ export default function LoginPage() {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState("")
     const router = useRouter()
+    const searchParams = useSearchParams()
+    const verified = searchParams.get("verified") === "true"
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -55,8 +57,15 @@ export default function LoginPage() {
                     {/* Decorative element */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-50 rounded-full -mr-16 -mt-16 opacity-50" />
 
+                    {verified && (
+                        <div className="p-4 bg-emerald-50 border border-emerald-100 rounded-2xl flex items-center gap-3 text-emerald-700 text-xs font-black uppercase tracking-wider mb-6">
+                            <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                            Email Successfully Verified. Link Established.
+                        </div>
+                    )}
+
                     {error && (
-                        <div className="p-4 bg-red-50 border border-red-100 rounded-2xl flex items-center gap-3 text-red-700 text-xs font-black uppercase tracking-wider">
+                        <div className="p-4 bg-red-50 border border-red-100 rounded-2xl flex items-center gap-3 text-red-700 text-xs font-black uppercase tracking-wider mb-6">
                             <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
                             {error}
                         </div>
