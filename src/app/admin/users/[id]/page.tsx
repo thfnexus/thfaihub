@@ -25,7 +25,7 @@ async function updateUser(formData: FormData) {
     if (action === "suspend") {
         await (prisma.user.update as any)({
             where: { id: userId },
-            data: { status: "SUSPENDED" }
+            data: { status: "SUSPENDED", credits: 0 }
         });
     } else if (action === "unsuspend") {
         await (prisma.user.update as any)({
@@ -129,6 +129,15 @@ export default async function UserDetailPage({ params }: { params: Promise<{ id:
                             className="w-full p-4 rounded-xl bg-white/50 border border-slate-200 font-bold text-slate-900 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all"
                         />
                     </div>
+
+                    {user.status !== 'SUSPENDED' && (
+                        <div className="p-3 rounded-xl bg-red-50 border border-red-100 flex items-center gap-3">
+                            <span className="text-lg">⚠️</span>
+                            <p className="text-[10px] font-black text-red-600 uppercase tracking-widest leading-relaxed">
+                                Note: Suspending this account will immediately reset their credits to 0 to prevent further use.
+                            </p>
+                        </div>
+                    )}
 
                     <div className="pt-8 border-t border-slate-200/60 flex flex-col-reverse md:flex-row justify-between items-center gap-4">
                         {user.status === 'SUSPENDED' ? (

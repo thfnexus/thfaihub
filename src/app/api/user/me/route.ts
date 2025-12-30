@@ -15,8 +15,9 @@ export async function GET() {
             select: {
                 credits: true,
                 role: true,
-                plan: true
-            }
+                plan: true,
+                status: true
+            } as any
         })
 
         return NextResponse.json(user)

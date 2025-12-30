@@ -48,6 +48,10 @@ export async function generateSkillAnalysis(
             return { success: false, error: "Not authenticated" }
         }
 
+        if ((session.user.role as any) === "SUSPENDED") {
+            return { success: false, error: "Your account has been suspended. Please contact support." }
+        }
+
         const user = await prisma.user.findUnique({
             where: { id: session.user.id },
             select: { credits: true }
