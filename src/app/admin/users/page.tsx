@@ -2,10 +2,10 @@ import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 
 export default async function UsersPage() {
-    const users = await prisma.user.findMany({
+    const users = (await prisma.user.findMany({
         orderBy: { createdAt: 'desc' },
-        select: { id: true, email: true, role: true, plan: true, credits: true, createdAt: true }
-    });
+        select: { id: true, email: true, role: true, plan: true, credits: true, createdAt: true, status: true }
+    })) as any[];
 
     return (
         <div className="space-y-8">
@@ -31,6 +31,7 @@ export default async function UsersPage() {
                             <th className="px-8 py-6 text-[10px] font-black text-slate-400 uppercase tracking-widest">Email</th>
                             <th className="px-8 py-6 text-[10px] font-black text-slate-400 uppercase tracking-widest">Role</th>
                             <th className="px-8 py-6 text-[10px] font-black text-slate-400 uppercase tracking-widest">Plan</th>
+                            <th className="px-8 py-6 text-[10px] font-black text-slate-400 uppercase tracking-widest">Status</th>
                             <th className="px-8 py-6 text-[10px] font-black text-slate-400 uppercase tracking-widest">Credits</th>
                             <th className="px-8 py-6 text-[10px] font-black text-slate-400 uppercase tracking-widest">Joined</th>
                             <th className="px-8 py-6 text-[10px] font-black text-slate-400 uppercase tracking-widest text-right">Actions</th>
@@ -53,6 +54,12 @@ export default async function UsersPage() {
                                         user.plan === 'PRO' ? 'bg-blue-100 text-blue-700 shadow-sm' : 'bg-slate-100 text-slate-500'
                                         }`}>
                                         {user.plan}
+                                    </span>
+                                </td>
+                                <td className="px-8 py-5">
+                                    <span className={`px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-wider ${user.status === 'SUSPENDED' ? 'bg-red-100 text-red-700 shadow-sm' : 'bg-green-100 text-green-700 shadow-sm'
+                                        }`}>
+                                        {user.status}
                                     </span>
                                 </td>
                                 <td className="px-8 py-5">
@@ -106,6 +113,12 @@ export default async function UsersPage() {
                                 <p className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1">Plan</p>
                                 <span className={`inline-block px-2 py-1 rounded-md text-[10px] font-black uppercase tracking-wider ${user.plan === 'PREMIUM' ? 'bg-yellow-100 text-yellow-700' : user.plan === 'PRO' ? 'bg-blue-100 text-blue-700' : 'bg-slate-200 text-slate-600'}`}>
                                     {user.plan}
+                                </span>
+                            </div>
+                            <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                <p className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1">Status</p>
+                                <span className={`inline-block px-2 py-1 rounded-md text-[10px] font-black uppercase tracking-wider ${user.status === 'SUSPENDED' ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
+                                    {user.status}
                                 </span>
                             </div>
                         </div>

@@ -24,6 +24,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                     return null
                 }
 
+                if (user.status === "SUSPENDED") {
+                    console.log('❌ Account suspended:', email)
+                    throw new Error("ACCOUNT_SUSPENDED")
+                }
+
                 const passwordsMatch = await bcrypt.compare(credentials.password as string, user.password)
                 console.log('Password match result:', passwordsMatch)
 
@@ -59,15 +64,18 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                     // Fetch fresh data for credits/plan
                     const freshUser = await prisma.user.findUnique({
                         where: { id: token.sub },
-                        select: { role: true, plan: true, credits: true }
+                        select: { role: true, plan: true, credits: true, status: true }
                     })
 
                     if (freshUser) {
-                        session.user.role = freshUser.role
-                        session.user.plan = freshUser.plan
-                        // We'll attach credits to the session type if needed, or fetch in component
-                        // For now, let's keep session minimal conform to types, or extend types for credits too.
-                        // Extended types had role/plan. Credits is extra.
+                        if (freshUser.status === "SUSPENDED") {
+                            // We can't return null here easily without type errors in some NextAuth versions
+                            // So we set a special role or just let it be, and authorize will handle new logins.
+                            session.user.role = "SUSPENDED" as any;
+                        } else {
+                            session.user.role = freshUser.role
+                            session.user.plan = freshUser.plan
+                        }
                     }
                 } catch (error) {
                     console.error("Auth Session DB Error:", error)

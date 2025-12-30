@@ -18,6 +18,11 @@ enum Plan {
   PREMIUM
 }
 
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+}
+
 model User {
   id        String   @id @default(cuid())
   email     String   @unique
@@ -26,6 +31,7 @@ model User {
   name      String?
   role      Role     @default(USER)
   plan      Plan     @default(FREE)
+  status    UserStatus @default(ACTIVE)
   credits   Int      @default(0)
   createdAt DateTime @default(now())
   logs      UsageLog[]

@@ -13,10 +13,14 @@ async function updateUser(formData: FormData) {
     const action = formData.get("action");
 
     if (action === "suspend") {
-        // Simple suspension logic: Remove credits and downgrade
         await prisma.user.update({
             where: { id: userId },
-            data: { plan: "FREE", credits: 0 }
+            data: { status: "SUSPENDED" }
+        });
+    } else if (action === "unsuspend") {
+        await prisma.user.update({
+            where: { id: userId },
+            data: { status: "ACTIVE" }
         });
     } else {
         await prisma.user.update({
@@ -64,7 +68,12 @@ export default async function UserDetailPage({ params }: { params: Promise<{ id:
                     </div>
                     <div>
                         <label className="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">User Email</label>
-                        <p className="text-2xl font-black text-slate-900 tracking-tight">{user.email}</p>
+                        <p className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-3">
+                            {user.email}
+                            <span className={`px-2 py-0.5 rounded text-[10px] uppercase ${user.status === 'SUSPENDED' ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'}`}>
+                                {user.status}
+                            </span>
+                        </p>
                     </div>
                 </div>
 
@@ -112,9 +121,15 @@ export default async function UserDetailPage({ params }: { params: Promise<{ id:
                     </div>
 
                     <div className="pt-8 border-t border-slate-200/60 flex flex-col-reverse md:flex-row justify-between items-center gap-4">
-                        <button name="action" value="suspend" className="px-6 py-3 rounded-xl text-red-500 text-xs font-black uppercase tracking-widest hover:bg-red-50 transition-colors">
-                            Suspend Account
-                        </button>
+                        {user.status === 'SUSPENDED' ? (
+                            <button name="action" value="unsuspend" className="px-6 py-3 rounded-xl text-green-500 text-xs font-black uppercase tracking-widest hover:bg-green-50 transition-colors border border-green-200">
+                                Reactivate Account
+                            </button>
+                        ) : (
+                            <button name="action" value="suspend" className="px-6 py-3 rounded-xl text-red-500 text-xs font-black uppercase tracking-widest hover:bg-red-50 transition-colors border border-red-200">
+                                Suspend Account
+                            </button>
+                        )}
                         <button type="submit" className="w-full md:w-auto px-8 py-4 bg-slate-900 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-blue-600 transition-colors shadow-xl shadow-slate-900/10 active:scale-[0.98]">
                             Save Changes
                         </button>
