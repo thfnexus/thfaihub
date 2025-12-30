@@ -33,9 +33,31 @@ async function updateUser(formData: FormData) {
             data: { status: "ACTIVE" }
         });
     } else {
+        // Fetch current user to check for changes
+        const currentUser = await prisma.user.findUnique({
+            where: { id: userId },
+            select: { plan: true, credits: true }
+        });
+
+        let finalCredits = credits;
+
+        // Plan Default Credits
+        const planDefaults: Record<string, number> = {
+            'FREE': 10,
+            'PRO': 80,
+            'PREMIUM': 250
+        };
+
+        if (currentUser && plan !== currentUser.plan) {
+            // If plan changed and credits field wasn't manually modified from old value
+            if (credits === currentUser.credits) {
+                finalCredits = planDefaults[plan] || credits;
+            }
+        }
+
         await prisma.user.update({
             where: { id: userId },
-            data: { plan, role, credits }
+            data: { plan, role, credits: finalCredits }
         });
     }
 
@@ -128,6 +150,9 @@ export default async function UserDetailPage({ params }: { params: Promise<{ id:
                             defaultValue={user.credits}
                             className="w-full p-4 rounded-xl bg-white/50 border border-slate-200 font-bold text-slate-900 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all"
                         />
+                        <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest bg-blue-50/50 p-2 rounded-lg border border-blue-100/50">
+                            💡 Change plan to auto-reset credits to plan default (FREE: 10, PRO: 80, PREMIUM: 250).
+                        </p>
                     </div>
 
                     {user.status !== 'SUSPENDED' && (
