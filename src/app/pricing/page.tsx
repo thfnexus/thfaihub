@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { Check, Zap, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import PaymentModal from "@/components/PaymentModal";
 
 export default function PricingPage() {
     const plans = [
@@ -47,8 +51,16 @@ export default function PricingPage() {
         },
     ];
 
+    const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
     return (
         <div className="py-20 px-4">
+            {selectedPlan && (
+                <PaymentModal
+                    planName={selectedPlan}
+                    onClose={() => setSelectedPlan(null)}
+                />
+            )}
             <div className="container mx-auto max-w-6xl">
                 <h1 className="text-4xl font-bold text-center mb-4">Simple Pricing</h1>
                 <p className="text-center text-gray-800 mb-12">Checking out our beta? Pricing may change.</p>
@@ -93,15 +105,24 @@ export default function PricingPage() {
                                 ))}
                             </ul>
 
-                            <Link
-                                href={`/checkout?plan=${plan.name.toUpperCase()}`}
-                                className={`text-center py-4 rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all ${plan.highlight
-                                    ? "bg-cyan-500 text-slate-900 hover:bg-cyan-400 shadow-lg shadow-cyan-500/20"
-                                    : "bg-slate-900 text-white hover:bg-slate-800 shadow-lg"
-                                    }`}
-                            >
-                                {plan.button}
-                            </Link>
+                            {plan.name !== "Free" ? (
+                                <button
+                                    onClick={() => setSelectedPlan(plan.name)}
+                                    className={`text-center py-4 rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all ${plan.highlight
+                                        ? "bg-cyan-500 text-slate-900 hover:bg-cyan-400 shadow-lg shadow-cyan-500/20"
+                                        : "bg-slate-900 text-white hover:bg-slate-800 shadow-lg"
+                                        }`}
+                                >
+                                    {plan.button}
+                                </button>
+                            ) : (
+                                <Link
+                                    href="/login" // Or whatever the free plan action is
+                                    className={`text-center py-4 rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all bg-slate-900 text-white hover:bg-slate-800 shadow-lg`}
+                                >
+                                    {plan.button}
+                                </Link>
+                            )}
                         </div>
                     ))}
                 </div>

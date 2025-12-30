@@ -38,6 +38,7 @@ model User {
   verificationToken String?  @unique
   createdAt DateTime @default(now())
   logs      UsageLog[]
+  payments  PaymentRequest[]
 }
 
 model UsageLog {
@@ -61,4 +62,22 @@ model Scholarship {
   eligibility_criteria String
   source_url          String
   last_verified       DateTime @default(now())
+}
+
+enum PaymentStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model PaymentRequest {
+  id            String        @id @default(cuid())
+  userId        String
+  user          User          @relation(fields: [userId], references: [id])
+  plan          String
+  amount        Float
+  transactionId String        @unique
+  status        PaymentStatus @default(PENDING)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
 }

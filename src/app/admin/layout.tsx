@@ -1,7 +1,7 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { Users, LayoutDashboard } from "lucide-react";
+import { Users, LayoutDashboard, CreditCard } from "lucide-react";
 
 export default async function AdminLayout({
     children,
@@ -26,6 +26,9 @@ export default async function AdminLayout({
                     </Link>
                     <Link href="/admin/users" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">
                         <Users className="w-5 h-5" /> User Management
+                    </Link>
+                    <Link href="/admin/payments" className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">
+                        <CreditCard className="w-5 h-5" /> Payments
                     </Link>
                 </nav>
             </aside>

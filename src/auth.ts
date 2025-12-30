@@ -1,7 +1,11 @@
-import NextAuth from "next-auth"
+import NextAuth, { CredentialsSignin } from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 import { prisma } from "@/lib/prisma"
 import bcrypt from "bcryptjs"
+
+class EmailNotVerifiedError extends CredentialsSignin {
+    code = "EMAIL_NOT_VERIFIED"
+}
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
     providers: [
@@ -27,6 +31,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                 if ((user as any).status === "SUSPENDED") {
                     console.log('❌ Account suspended:', email)
                     throw new Error("ACCOUNT_SUSPENDED")
+                }
+
+                if (!(user as any).emailVerified) {
+                    console.log('❌ Email not verified:', email)
+                    throw new EmailNotVerifiedError()
                 }
 
                 const passwordsMatch = await bcrypt.compare(credentials.password as string, user.password)

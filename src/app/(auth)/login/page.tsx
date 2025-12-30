@@ -28,7 +28,15 @@ export default function LoginPage() {
             })
 
             if (res?.error) {
-                setError("Access Denied: Invalid authentication parameters.")
+                console.log("Login Error Full Object:", res);
+                if (res.error === "EMAIL_NOT_VERIFIED" || res.code === "EMAIL_NOT_VERIFIED" || res.error.includes("EMAIL_NOT_VERIFIED")) {
+                    setError("PENDING VERIFICATION: Please check your email to verify your account before accessing the system.");
+                } else if (res.error === "ACCOUNT_SUSPENDED" || res.error.includes("ACCOUNT_SUSPENDED")) {
+                    setError("ACCESS REVOKED: This account has been suspended by administration.");
+                } else {
+                    // Fallback: show the actual error to help debugging
+                    setError(`Access Denied: ${res.error === "Configuration" ? "System Error" : "Invalid authentication parameters."}`);
+                }
             } else {
                 router.push("/")
                 router.refresh()
