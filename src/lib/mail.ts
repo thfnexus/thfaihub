@@ -7,7 +7,7 @@ export const sendVerificationEmail = async (email: string, token: string) => {
 
     try {
         await resend.emails.send({
-            from: 'THF AI Hub <onboarding@resend.dev>', // Update this after user provides their verified domain
+            from: 'THF AI Hub <no-reply@thfnexus.com>', // Update this after user provides their verified domain
             to: email,
             subject: 'Verify your email - THF AI Hub',
             html: `
@@ -16,7 +16,7 @@ export const sendVerificationEmail = async (email: string, token: string) => {
                         THF AI <span style="color: #2563eb;">Hub</span>
                     </h1>
                     <p style="color: #475569; font-size: 16px; line-height: 24px; margin-top: 24px;">
-                        Welcome to THF AI Hub! To start using our tools and credits, please verify your email address by clicking the button below:
+                        Welcome to THF AI Hub! To start using our tools and credits, please verify your email address by clicking the button below. After verification, you can return to the website and log in to your account.
                     </p>
                     <div style="text-align: center; margin-top: 32px;">
                         <a href="${confirmLink}" style="background-color: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;">
