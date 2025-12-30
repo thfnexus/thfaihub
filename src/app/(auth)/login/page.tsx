@@ -1,12 +1,12 @@
 'use client'
 
-import { useState } from "react"
+import { useState, Suspense } from "react"
 import { signIn } from "next-auth/react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { Mail, Lock, Loader2, ArrowRight, ShieldCheck } from "lucide-react"
 
-export default function LoginPage() {
+function LoginForm() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [loading, setLoading] = useState(false)
@@ -141,5 +141,17 @@ export default function LoginPage() {
                 </div>
             </div>
         </div>
+    )
+}
+
+export default function LoginPage() {
+    return (
+        <Suspense fallback={
+            <div className="flex h-screen items-center justify-center bg-slate-50">
+                <Loader2 className="w-10 h-10 animate-spin text-cyan-600" />
+            </div>
+        }>
+            <LoginForm />
+        </Suspense>
     )
 }
