@@ -40,7 +40,7 @@ export default function SupportPage() {
                 {
                     id: 'plan2',
                     question: 'How do I upgrade my plan?',
-                    answer: 'Visit the Pricing page, select your desired plan (Pro or Premium), and use the manual payment method (JazzCash/EasyPaisa). Submit your Transaction ID (TRX ID) in the modal to activate your plan.'
+                    answer: 'Visit the Pricing page, select your desired plan (Pro or Premium), and click the "Send Invoice on WhatsApp" button. This will send a pre-filled invoice to our support team, who will guide you through payment and activate your plan.'
                 },
                 {
                     id: 'plan3',
@@ -75,7 +75,7 @@ export default function SupportPage() {
                 {
                     id: 'bill1',
                     question: 'What payment methods do you accept?',
-                    answer: 'We currently accept manual payments via JazzCash and EasyPaisa. Transfers are verified manually by our team to ensure security.'
+                    answer: 'We currently accept manual payments via JazzCash and EasyPaisa. Transfers are verified manually by our team via WhatsApp to ensure security.'
                 },
                 {
                     id: 'bill2',
@@ -85,7 +85,7 @@ export default function SupportPage() {
                 {
                     id: 'bill3',
                     question: 'Are payments automatically recurring?',
-                    answer: 'No, payments are not auto-deducted. You will need to manually renew your plan each month by sending the payment and submitting the TRX ID again.'
+                    answer: 'No, payments are not auto-deducted. You will need to manually renew your plan each month by sending an invoice request via WhatsApp.'
                 }
             ]
         }
