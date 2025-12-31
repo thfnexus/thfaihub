@@ -3,7 +3,8 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendVerificationEmail = async (email: string, token: string) => {
-    const confirmLink = `${process.env.NEXT_PUBLIC_APP_URL}/api/auth/verify?token=${token}`;
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://thfaihub.thfnexus.com';
+    const confirmLink = `${appUrl}/api/auth/verify?token=${token}`;
 
     try {
         await resend.emails.send({
