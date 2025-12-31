@@ -15,7 +15,7 @@ export default function SupportPage() {
                 {
                     id: 'acc1',
                     question: 'How do I create an account?',
-                    answer: 'Click on "Sign Up" in the navbar, enter your Full Name, Username, Email, and Password. You\'ll receive 5 free credits to get started!'
+                    answer: 'Click on "Sign Up" in the navbar, enter your Full Name, Username, Email, and Password. You\'ll receive 10 free credits to get started!'
                 },
                 {
                     id: 'acc2',
@@ -35,17 +35,17 @@ export default function SupportPage() {
                 {
                     id: 'plan1',
                     question: 'What are credits and how do they work?',
-                    answer: 'Credits are used to access AI tools. Each tool usage costs a certain number of credits. You can view your balance in the navbar.'
+                    answer: 'Credits are the currency of THF AI Hub. Each tool usage deducts credits from your balance. Free users get 10 credits on signup!'
                 },
                 {
                     id: 'plan2',
                     question: 'How do I upgrade my plan?',
-                    answer: 'Visit the Pricing page, select your desired plan (Pro or Premium), and complete the checkout process. Your credits will be updated instantly.'
+                    answer: 'Visit the Pricing page, select your desired plan (Pro or Premium), and use the manual payment method (JazzCash/EasyPaisa). Submit your Transaction ID (TRX ID) in the modal to activate your plan.'
                 },
                 {
                     id: 'plan3',
                     question: 'Can I downgrade or cancel my plan?',
-                    answer: 'Yes, you can change your plan anytime. Contact support or manage it from your profile settings.'
+                    answer: 'Plans are prepaid for the month. To cancel, simply do not renew your subscription next month. You can switch plans by purchasing a different one when your current one expires.'
                 }
             ]
         },
@@ -55,17 +55,17 @@ export default function SupportPage() {
                 {
                     id: 'tool1',
                     question: 'Which AI tools are available?',
-                    answer: 'We offer AI Career Counselor, Skills Analyzer, Degree vs Skill Analyzer, and Career Timeline Simulator. All tools are currently in "Coming Soon" mode.'
+                    answer: 'We offer a wide range of career tools: AI Career Counselor, Skills Analyzer, Degree vs Skill Analyzer, Career Timeline Simulator, Course Recommender, Interview Coach, Portfolio Builder, and Scholarship Planner.'
                 },
                 {
                     id: 'tool2',
                     question: 'How many credits does each tool cost?',
-                    answer: 'Tool costs vary. Typically, basic queries cost 1-2 credits, while advanced analyses may cost more. This will be displayed when tools go live.'
+                    answer: 'Basic analysis tools typically cost 1-3 credits per use. Deeper, multi-step simulations or complex portfolio building may cost more. The exact cost is displayed before you run a tool.'
                 },
                 {
                     id: 'tool3',
                     question: 'What happens if I run out of credits?',
-                    answer: 'Tools will be locked until you purchase more credits or upgrade your plan. Free users get 5 credits daily.'
+                    answer: 'You will need to upgrade to a Pro or Premium plan to get more credits. The Free plan is a one-time starter pack.'
                 }
             ]
         },
@@ -75,27 +75,27 @@ export default function SupportPage() {
                 {
                     id: 'bill1',
                     question: 'What payment methods do you accept?',
-                    answer: 'We accept all major credit/debit cards. Payment processing is secure and encrypted.'
+                    answer: 'We currently accept manual payments via JazzCash and EasyPaisa. Transfers are verified manually by our team to ensure security.'
                 },
                 {
                     id: 'bill2',
                     question: 'Is there a refund policy?',
-                    answer: 'Yes, we offer a 7-day money-back guarantee if you\'re not satisfied with our service. Contact support for refund requests.'
+                    answer: 'Yes, we offer a 7-day money-back guarantee if you are not satisfied with our service. Contact support via WhatsApp or Email for refund requests.'
                 },
                 {
                     id: 'bill3',
-                    question: 'Are payments recurring?',
-                    answer: 'Yes, Pro and Premium plans are monthly subscriptions. You can cancel anytime before your next billing cycle.'
+                    question: 'Are payments automatically recurring?',
+                    answer: 'No, payments are not auto-deducted. You will need to manually renew your plan each month by sending the payment and submitting the TRX ID again.'
                 }
             ]
         }
     ]
 
     const guides = [
-        { title: 'How to use AI Career Counselor', link: '#' },
-        { title: 'Understanding Credit System', link: '#' },
-        { title: 'Maximizing tool accuracy', link: '#' },
-        { title: 'Plan comparison guide', link: '#' }
+        { title: 'Getting Started with AI Career Counselor', link: '/tools/career-counselor' },
+        { title: 'Optimizing your Skills Analysis', link: '/tools/skills-analyzer' },
+        { title: 'Building a Winning Portfolio', link: '/tools/portfolio-builder' },
+        { title: 'Understanding the Credit System', link: '/pricing-explained' }
     ]
 
     const toggleFaq = (id: string) => {
