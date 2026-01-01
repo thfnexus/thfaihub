@@ -47,7 +47,7 @@ model UsageLog {
   toolName  String
   creditsUsed Int
   createdAt DateTime @default(now())
-  user      User     @relation(fields: [userId], references: [id])
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Scholarship {
@@ -73,7 +73,7 @@ enum PaymentStatus {
 model PaymentRequest {
   id            String        @id @default(cuid())
   userId        String
-  user          User          @relation(fields: [userId], references: [id])
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
   plan          String
   amount        Float
   transactionId String        @unique
