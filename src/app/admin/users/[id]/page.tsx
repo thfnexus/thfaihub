@@ -3,6 +3,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import DeleteUserButton from "@/components/admin/DeleteUserButton";
 
 interface User {
     id: string;
@@ -176,15 +177,23 @@ export default async function UserDetailPage({ params }: { params: Promise<{ id:
                     )}
 
                     <div className="pt-8 border-t border-slate-200/60 flex flex-col-reverse md:flex-row justify-between items-center gap-4">
-                        {user.status === 'SUSPENDED' ? (
-                            <button name="action" value="unsuspend" className="px-6 py-3 rounded-xl text-green-500 text-xs font-black uppercase tracking-widest hover:bg-green-50 transition-colors border border-green-200">
-                                Reactivate Account
-                            </button>
-                        ) : (
-                            <button name="action" value="suspend" className="px-6 py-3 rounded-xl text-red-500 text-xs font-black uppercase tracking-widest hover:bg-red-50 transition-colors border border-red-200">
-                                Suspend Account
-                            </button>
-                        )}
+                        <div className="w-full md:w-auto flex flex-col md:flex-row gap-3">
+                            {user.status === 'SUSPENDED' ? (
+                                <button name="action" value="unsuspend" className="w-full md:w-auto px-6 py-3 rounded-xl text-green-500 text-xs font-black uppercase tracking-widest hover:bg-green-50 transition-colors border border-green-200">
+                                    Reactivate Account
+                                </button>
+                            ) : (
+                                <button name="action" value="suspend" className="w-full md:w-auto px-6 py-3 rounded-xl text-red-500 text-xs font-black uppercase tracking-widest hover:bg-red-50 transition-colors border border-red-200">
+                                    Suspend Account
+                                </button>
+                            )}
+                            <DeleteUserButton
+                                userId={user.id}
+                                userEmail={user.email}
+                                isSuspended={user.status === 'SUSPENDED'}
+                                className="w-full md:w-auto px-6 py-3 rounded-xl border border-red-200 text-red-500 text-xs font-black uppercase tracking-widest hover:bg-red-50 transition-colors justify-center"
+                            />
+                        </div>
                         <button type="submit" className="w-full md:w-auto px-8 py-4 bg-slate-900 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-blue-600 transition-colors shadow-xl shadow-slate-900/10 active:scale-[0.98]">
                             Save Changes
                         </button>

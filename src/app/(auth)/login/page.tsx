@@ -51,7 +51,6 @@ function LoginForm() {
     return (
         <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center bg-slate-50 px-4 py-12">
             <div className="w-full max-w-lg">
-                {/* Brand Header */}
                 <div className="text-center mb-8 space-y-2">
                     <h1 className="text-3xl md:text-5xl font-black text-slate-900 uppercase italic tracking-tighter leading-none">
                         Nexus <span className="text-cyan-600">Login</span>
@@ -62,7 +61,6 @@ function LoginForm() {
                 </div>
 
                 <div className="bg-white p-8 md:p-12 rounded-[40px] border border-slate-200 shadow-2xl space-y-8 relative overflow-hidden">
-                    {/* Decorative element */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-50 rounded-full -mr-16 -mt-16 opacity-50" />
 
                     {verified && (

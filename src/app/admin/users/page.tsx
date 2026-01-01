@@ -1,3 +1,4 @@
+import DeleteUserButton from "@/components/admin/DeleteUserButton";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 
@@ -79,12 +80,19 @@ export default async function UsersPage() {
                                 </td>
                                 <td className="px-8 py-5 text-slate-500 text-xs font-bold uppercase tracking-wide">{user.createdAt.toLocaleDateString()}</td>
                                 <td className="px-8 py-5 text-right">
-                                    <Link
-                                        href={`/admin/users/${user.id}`}
-                                        className="text-blue-600 font-black text-[10px] uppercase tracking-widest hover:text-blue-700 hover:underline decoration-2 underline-offset-4"
-                                    >
-                                        Manage
-                                    </Link>
+                                    <div className="flex items-center justify-end gap-3">
+                                        <Link
+                                            href={`/admin/users/${user.id}`}
+                                            className="text-blue-600 font-black text-[10px] uppercase tracking-widest hover:text-blue-700 hover:underline decoration-2 underline-offset-4"
+                                        >
+                                            Manage
+                                        </Link>
+                                        <DeleteUserButton
+                                            userId={user.id}
+                                            userEmail={user.email}
+                                            isSuspended={user.status === 'SUSPENDED'}
+                                        />
+                                    </div>
                                 </td>
                             </tr>
                         ))}
@@ -106,10 +114,17 @@ export default async function UsersPage() {
                                     <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{user.createdAt.toLocaleDateString()}</p>
                                 </div>
                             </div>
-                            <Link href={`/admin/users/${user.id}`} className="p-2 bg-blue-50 text-blue-600 rounded-lg">
-                                <span className="sr-only">Manage</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6" /></svg>
-                            </Link>
+                            <div className="flex items-center gap-2">
+                                <DeleteUserButton
+                                    userId={user.id}
+                                    userEmail={user.email}
+                                    isSuspended={user.status === 'SUSPENDED'}
+                                />
+                                <Link href={`/admin/users/${user.id}`} className="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                                    <span className="sr-only">Manage</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6" /></svg>
+                                </Link>
+                            </div>
                         </div>
 
                         <div className="grid grid-cols-2 gap-2 mt-1">
