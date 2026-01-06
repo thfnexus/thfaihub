@@ -39,6 +39,9 @@ model User {
   createdAt DateTime @default(now())
   logs      UsageLog[]
   payments  PaymentRequest[]
+  tasks     RoutineTask[]
+  performance DailyPerformance[]
+  habits    HabitStreak[]
 }
 
 model UsageLog {
@@ -81,3 +84,55 @@ model PaymentRequest {
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
 }
+
+// Routine Manager Models
+
+model RoutineTask {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title         String
+  deadline      DateTime?
+  priority      String   // "urgent", "important", "normal"
+  focusType     String   // "deep_work", "light_work", "creative"
+  estimatedMins Int
+  completed     Boolean  @default(false)
+  completedAt   DateTime?
+  scheduledFor  DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model DailyPerformance {
+  id                String   @id @default(cuid())
+  userId            String
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date              DateTime
+  hoursCompleted    Float
+  distractionMins   Int
+  focusScore        Int      // 0-100
+  stressLevel       Int      // 1-10
+  tasksCompleted    Int
+  tasksPlanned      Int
+  createdAt         DateTime @default(now())
+  
+  @@unique([userId, date])
+}
+
+model HabitStreak {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  habitType     String   // "daily_routine", "focus_time", "break_adherence"
+  currentStreak Int      @default(0)
+  longestStreak Int      @default(0)
+  lastCompletedDate DateTime?
+  badges        String[] // array of earned badges
+  level         Int      @default(1)
+  xp            Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  @@unique([userId, habitType])
+}
+

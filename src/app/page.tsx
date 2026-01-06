@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Lock, Brain, TrendingUp, GraduationCap, Briefcase, UserCheck, CircleDollarSign, BookOpen, Layout } from "lucide-react";
+import { ArrowRight, Lock, Brain, TrendingUp, GraduationCap, Briefcase, UserCheck, CircleDollarSign, BookOpen, Layout, Clock, Calendar, Heart, CheckSquare } from "lucide-react";
 
 export default function Home() {
   const tools = [
@@ -25,10 +25,10 @@ export default function Home() {
       isActive: true,
     },
     {
-      name: "Career Timeline Simulator",
-      description: "Convert your goals into a detailed 5-year strategic roadmap with milestones.",
-      icon: <TrendingUp className="w-8 h-8 mb-4 text-orange-500" />,
-      href: "/tools/career-timeline",
+      name: "Income Sources",
+      description: "Get a personalized roadmap of income sources based on your skills, time, and goals across immediate, mid-term, and long-term horizons.",
+      icon: <CircleDollarSign className="w-8 h-8 mb-4 text-orange-500" />,
+      href: "/tools/income-sources",
       isActive: true,
     },
     {
@@ -58,6 +58,34 @@ export default function Home() {
       icon: <Layout className="w-8 h-8 mb-4 text-cyan-500" />,
       href: "/tools/portfolio-builder",
       isActive: true,
+    },
+    {
+      name: "AI Daily Routine Manager",
+      description: "Get an energy-based daily schedule that prevents burnout, boosts focus, and adapts to your unique productivity patterns.",
+      icon: <Clock className="w-8 h-8 mb-4 text-pink-500" />,
+      href: "/tools/routine-manager",
+      isActive: true,
+    },
+    {
+      name: "AI Mental Health Companion",
+      description: "AI-powered mental wellness support with mood tracking, stress management, and personalized coping strategies.",
+      icon: <Heart className="w-8 h-8 mb-4 text-rose-500" />,
+      href: "/tools/mental-health",
+      isActive: false,
+    },
+    {
+      name: "AI Study Plan Generator",
+      description: "Generate optimized study plans based on your learning style, exam dates, and subject difficulty.",
+      icon: <Calendar className="w-8 h-8 mb-4 text-violet-500" />,
+      href: "/tools/study-planner",
+      isActive: false,
+    },
+    {
+      name: "AI Habit Tracker",
+      description: "Build lasting habits with AI-powered tracking, streaks, accountability, and behavior pattern analysis.",
+      icon: <CheckSquare className="w-8 h-8 mb-4 text-teal-500" />,
+      href: "/tools/habit-tracker",
+      isActive: false,
     },
   ];
 
